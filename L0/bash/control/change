@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "enter numbers"
+read a b
+let c=$[$a+$b]
+let x=$[$c-$a]
+let y=$[$c-$b]
+echo "$x $y"
+

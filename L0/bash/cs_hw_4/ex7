@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "Enter Y to see all files including hidden files"
+echo "Enter N to see all non-hidden files"
+echo "Enter Q to quit"
+read -p "Enter your choice:" letter
+case $letter in
+     Y) echo "Displaying all (really...) files"  
+     ls -a ;;
+     N) echo "show all files without Hidden"
+     ls ;;
+     Q) exit ;;
+     *) echo "Invalid choice" exit
+esac
+
+     
+

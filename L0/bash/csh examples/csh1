@@ -1,0 +1,5 @@
+#!/bin/csh
+@x=$#argv/2
+@argv[$j]=$j+4
+@x+=3
+i++

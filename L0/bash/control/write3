@@ -1,0 +1,14 @@
+#!/bin/bash
+echo "enter any positive number"
+read a
+b=$a
+digits=0
+while [ $a -ne 0 ]
+do
+	let digits=$digits+1
+	let a=a/10
+done
+let c=10**$digits
+let d=3*$c
+let result=$d+$b
+echo "we wrote this number using 3 in the beginning : $result"

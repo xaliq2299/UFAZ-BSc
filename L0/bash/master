@@ -1,0 +1,10 @@
+Master Theorem
+
+T(n)=aT(n/b)+n**c
+log(b)a with c
+a) log(b)a < 2  decreasing GS
+   big teta: n**c
+b) log(b)a = 2 flat GS
+   big teta: n**c x lg(b)n
+c) log(b)a > 2 increasing GS
+   big teta: n**lg(b)a

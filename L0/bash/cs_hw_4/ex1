@@ -1,0 +1,8 @@
+#!/bin/bash
+read -p "Number of handel calls:" Number
+read -p "Number of closed calls:" Numb
+if [[ $Number -gt 150 || $Numb -gt 50 ]]; then
+   echo "give bonus"
+else
+   echo "you must have handel calles more than 150 or closed calls more than 50"
+fi

@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "enter your date in format YEAR/MONTH/DAY"
+read date
+today=`date +%D`
+delta=$((`date +%s -d $date` - `date +%s -d $today`))
+if [ $delta -ge 0 ]; then
+echo "this day has not passed yet"
+else
+echo "this day has already passed"
+fi

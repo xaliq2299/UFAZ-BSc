@@ -1,0 +1,9 @@
+#!/bin/bash
+read number
+if [ $number -le 50 && $number -ge 25]; then
+   echo "go to work"
+elif [ $number -le 0 ];
+   echo "Age is negative"
+else
+   echo "go to vacancy"
+fi

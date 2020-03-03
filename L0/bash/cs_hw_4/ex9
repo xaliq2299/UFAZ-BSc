@@ -1,0 +1,6 @@
+#!/bin/bash
+today=`date +%s`
+newyear=`date +%s -d '2017/12/31'`
+let days=$(($newyear-$today))/86400
+echo "there are $days days left (till New Year)"
+

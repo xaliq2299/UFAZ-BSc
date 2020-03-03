@@ -1,0 +1,21 @@
+#!/bin/bash
+echo -n "Enter a number:"
+read num
+i=2
+gp=$i
+while [ $i -lt $num ]
+do
+if [ `expr $num % $i` -eq 0 ]
+then
+i=`expr $i + 1`
+else
+if [ $gp -lt $i ]
+then
+gp=$i
+fi
+i=`expr $i + 1`
+fi
+done
+echo "$gp is the greater prime number"
+
+

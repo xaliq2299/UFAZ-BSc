@@ -1,0 +1,12 @@
+#!/bin/bash
+ar[1]=2
+ar[2]=7
+ar[3]=9
+size=${#ar[*]}
+i=0
+while [ "$i" -lt "$size" ]
+do
+	echo ${ar[i]}
+	let "i=$i+1"
+done
+
