@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpol.a  CMakeFiles/pol.dir/numop.c.o CMakeFiles/pol.dir/polish.c.o CMakeFiles/pol.dir/stack.c.o
+/usr/bin/ranlib libpol.a

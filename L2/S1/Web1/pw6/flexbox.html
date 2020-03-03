@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practical Work 5</title>
+	<style type="text/css">
+		body{
+			background-color: grey; 
+			margin: 5px 10px 10px 5px;
+			font-family: Arial;
+			font-size: 10;
+			width: 100vw; height: 100vh;
+		}
+		.GridContainer{
+			display: flex;
+			flex-direction: vertical;
+			padding: 5px 10px 10px 5px;
+			box-sizing: border-box;
+		}
+		.Main{
+			display: flex;
+			flex-direction: horizontal;
+			flex: 0 0 1;
+			min-height: 400px;
+		}
+		.header{
+			flex: 60px 80px 100px;
+		}
+		.footer{
+			flex: 60px 80px 100px;
+		}
+		.nav{ width: 160px;} .aside{width: 160px;}
+	</style>
+</head>
+<body class="GridContainer">	
+	<header class="header">
+		<h3>Header</h3>
+		<p>The first section</p>
+	</header>
+	<div class="Main">
+		<nav class="nav">
+			<h3>Navigation</h3>
+			<p>Link1 Link2 Link3</p>
+		</nav>
+		<article class="article">
+			<h3>Article</h3>
+			<p>The Main part</p>
+		</article>
+		<aside class="aside">
+			<h3>Aside</h3>
+			<p>The secondary things</p>
+		</aside>
+	</div>
+	<footer class="footer">
+		<h3>Footer</h3>
+		<p>The last section</p>
+	</footer>
+</body>
+</html>

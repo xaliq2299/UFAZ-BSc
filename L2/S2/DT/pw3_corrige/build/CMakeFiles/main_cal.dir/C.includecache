@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../pol/numop.h
+stdio.h
+-
+stdint.h
+-
+stdlib.h
+-
+math.h
+-
+string.h
+-
+
+../pol/polish.h
+numop.h
+../pol/numop.h
+stack.h
+../pol/stack.h
+
+../pol/stack.h
+stdbool.h
+-
+numop.h
+../pol/numop.h
+
+/home/xaliq/CS/L2/S2/DT/pw3_corrige/main_calc.c
+polish.h
+/home/xaliq/CS/L2/S2/DT/pw3_corrige/polish.h
+

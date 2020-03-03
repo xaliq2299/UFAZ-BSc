@@ -1,0 +1,52 @@
+Text Using standard ASCII representation, each character (letter, space,
+punctuation mark, etc.) in a text document requires 8 bits or 1 byte.
+Suppose we have a fairly dense text with 50 lines of text per page and 100
+characters per line. This would give 5 kB per page. If the text were a hefty
+1000 pages, this would result in 5 MB. Alternatively, if we assume one word
+is on average 6 characters, then each word requires approximately 6 bytes.
+Therefore, a one million word document would require approximately 6
+MB. Although these numbers may sound big, remember that this is for a
+very large text document. As we’ll see other media result in significantly
+more data.
+
+Audio In digital audio, it’s typical to use 16 bits per sample and 44,100
+samples per second, resulting in 706 kb/sec or 88.2 kB/sec. With two
+channels for stereo we would get 176 kB/sec. Therefore, just 30 seconds
+of digital audio requires almost 5.3 MB, which is more than the 1000 page
+text document. An hour of two-channel audio results in about 635 MB.
+
+Images For a gray scale image, it’s typical to use 8 bits/pixel. A good
+resolution image might be 512×512 pixels, which would result in 0.26 MB.
+For a color image, we need to multiply by 3 for the three color components,
+resulting in about 0.786 MB. Assuming our previous estimate, of about
+6 characters per word, this means such an image is worth more 100,000
+words, rather than 1,000 words! Only 7 such images would result in about
+5.5 MB, more than the 1000 page text document.
+
+Video A standard frame rate for video is about 30 frames/sec. Using
+the estimates for images, we get about 7.86 MB/sec for black/white video
+and about 23.6 MB/sec for color video. This means that just one second
+of black/white video or 1/4 of a second of color video results in more
+data than the 1000 page text document. One minute of black/white video
+requires about 472 MB, while one minute of color video requires 1.416 GB.
+A two hour black/white video requires 56.6 GB, while a two hour color
+video requires almost 170 GB!
+
+The estimates above assume the data is represented directly in raw format
+(e.g., one byte for each character, one byte per gray scale pixel, etc.). The goal
+of compression is to represent signals (or more general data) in a more efficient
+form. Compression is extremely useful for both storage and transmission.
+Of course, the need for compression is dependent on storage and commu-
+nication technology. The estimates above are best appreciated in the context
+of typical capacities of storage media and data rates for communication. Some
+typical digital storage media and their capacities are floppy disk (about 1.4 MB),
+zip disk (100 MB or 250 MB), CD (about 700 MB), DVD (4.25 GB single-sided,
+8.5 GB double-sided, 18 GB double-sided and dual density). Some typical data
+rates for wired communication are 56 kb/sec for phone line modems, ...
+Although capacities of storage media and communication data rates available
+for most users have been increasing rapidly, the demand for data has kept pace.
+So far, it appears that “if the capacity is available the bits will come”. Moreover,
+the demand for throughput in wireless communication has been rapidly increas-
+ing and far outpacing the increases in efficiency in use of the limited spectrum.
+These forces will ensure that compression remains an important topic for the
+foreseeable future.

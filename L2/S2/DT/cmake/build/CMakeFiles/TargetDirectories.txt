@@ -1,0 +1,8 @@
+/home/xaliq/CS/L2/S2/DT/cmake/build/CMakeFiles/edit_cache.dir
+/home/xaliq/CS/L2/S2/DT/cmake/build/CMakeFiles/rebuild_cache.dir
+/home/xaliq/CS/L2/S2/DT/cmake/build/src/CMakeFiles/edit_cache.dir
+/home/xaliq/CS/L2/S2/DT/cmake/build/src/CMakeFiles/rebuild_cache.dir
+/home/xaliq/CS/L2/S2/DT/cmake/build/src/CMakeFiles/CMake-test.dir
+/home/xaliq/CS/L2/S2/DT/cmake/build/include/CMakeFiles/edit_cache.dir
+/home/xaliq/CS/L2/S2/DT/cmake/build/include/CMakeFiles/rebuild_cache.dir
+/home/xaliq/CS/L2/S2/DT/cmake/build/include/CMakeFiles/f.dir

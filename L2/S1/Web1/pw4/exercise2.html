@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercise2</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var banknots=[0,0,0,0,0,0,0];
+		amount=369;
+		while(amount!=0){		
+			if(amount>=200){
+				amount%=200;
+				banknots[0]+=1;
+			}
+			else if(amount>=100){
+				amount%=100;
+				banknots[1]+=1;
+			}
+			else if(amount>=50){
+				amount%=50;
+				banknots[2]+=1;
+			}
+			else if(amount>=20){
+				amount%=20;
+				banknots[3]+=1;
+			}
+			else if(amount>=10){
+				amount%=10;
+				banknots[4]+=1;
+			}
+			else if(amount>=5){
+				amount%=5;
+				banknots[5]+=1;
+			
+			}
+			else {
+				amount-=1;
+				banknots[6]+=1;
+			}
+		}
+		for(i=0;i<=6;i++){
+			if(banknots[i]!=0){
+				console.log(banknots[i]);
+				if(i == 0)
+					console.log("200 Manat bankote");
+				if(i == 1)
+					console.log("100 Manat bankote");
+				if(i == 2)
+					console.log("50 Manat bankote");
+				if(i == 3)
+					console.log("20 Manat bankote");
+				if(i == 4)
+					console.log("10 Manat bankote");
+				if(i == 5)
+					console.log("5 Manat bankote");
+				if(i == 6)
+					console.log("1 Manat bankote");
+			}
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

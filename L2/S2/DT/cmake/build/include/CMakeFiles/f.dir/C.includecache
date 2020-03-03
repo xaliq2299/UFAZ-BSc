@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xaliq/CS/L2/S2/DT/cmake/include/f.c
+stdio.h
+-
+f.h
+/home/xaliq/CS/L2/S2/DT/cmake/include/f.h
+
+/home/xaliq/CS/L2/S2/DT/cmake/include/f.h
+

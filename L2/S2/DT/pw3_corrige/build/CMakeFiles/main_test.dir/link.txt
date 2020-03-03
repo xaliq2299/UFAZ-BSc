@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/main_test.dir/main_test.c.o CMakeFiles/main_test.dir/testing.c.o  -o main_test -rdynamic pol/libpol.a -lcunit -lm 

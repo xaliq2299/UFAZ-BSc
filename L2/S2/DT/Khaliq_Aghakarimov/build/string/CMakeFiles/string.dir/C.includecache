@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xaliq/Khaliq_Aghakarimov/string/string.c
+string.h
+/home/xaliq/Khaliq_Aghakarimov/string/string.h
+
+/home/xaliq/Khaliq_Aghakarimov/string/string.h
+

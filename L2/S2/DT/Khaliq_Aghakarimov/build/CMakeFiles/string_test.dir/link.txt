@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/string_test.dir/test.c.o  -o string_test -rdynamic -lcunit string/libstring.a 

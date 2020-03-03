@@ -1,0 +1,36 @@
+#include <CUnit/CUnit.h>
+#include <CUnit/Basic.h>
+
+int setup(){return 0;}
+int teardown(){return 0;}
+
+void test1(){...}
+
+CU_ASSERT_DOUBLE_EQUAL(add(x,y), 12, 0.00001);
+CU_ASSERT_EQUAL(c1,c2)
+CU_ASSERT_TRUE(exp)
+
+
+CU_initialize_registry() != CUE_SUCCESS
+	CU_get_error_msg(); // CU_get_error()
+CU_pSuite s = CU_add_suite("operations", setup, teardown);
+		CU_cleanup_registry(); // if any problem
+CU_add_test(s,"add", test1);
+CU_basic_run_tests();
+CU_basic_show_failures(CU_get_failure_list());
+return CU_get_number_of_failures();
+
+CU_pTest add_test(CU_pSuite s, const char* msg,  CU_TestFunc test_func) // if we define 
+
+
+
+
+
+
+
+
+
+
+git remote add origin <url>
+git push -u origin master
+git rm (--cached) file

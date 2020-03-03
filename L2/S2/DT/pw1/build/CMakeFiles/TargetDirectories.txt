@@ -1,0 +1,8 @@
+/home/xaliq/CS/L2/S2/DT/pw1/b/CMakeFiles/edit_cache.dir
+/home/xaliq/CS/L2/S2/DT/pw1/b/CMakeFiles/rebuild_cache.dir
+/home/xaliq/CS/L2/S2/DT/pw1/b/main/CMakeFiles/edit_cache.dir
+/home/xaliq/CS/L2/S2/DT/pw1/b/main/CMakeFiles/rebuild_cache.dir
+/home/xaliq/CS/L2/S2/DT/pw1/b/main/CMakeFiles/Sieve_method.dir
+/home/xaliq/CS/L2/S2/DT/pw1/b/src/CMakeFiles/rebuild_cache.dir
+/home/xaliq/CS/L2/S2/DT/pw1/b/src/CMakeFiles/edit_cache.dir
+/home/xaliq/CS/L2/S2/DT/pw1/b/src/CMakeFiles/shapes.dir

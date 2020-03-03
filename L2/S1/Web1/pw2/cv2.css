@@ -1,0 +1,62 @@
+h1 {
+	background: powderblue;
+	padding: 1px 2px 2px 1px;
+    text-align: center;
+}
+
+h2{
+	border: solid grey;
+	padding: 1px 2px 2px 1px;
+	border-style: ridge;
+}
+
+img{
+	display: block;
+	margin-left: auto;
+}
+
+p.p0{
+	width: 650px;
+	margin: 5px 10px 5px 10px;
+	border: 4px solid red;
+	padding: 5px 10px 5px 10px;
+	font-family: Times;
+	font-size: 14pt;
+	text-align: justify;
+}
+
+table{
+	table-layout: fixed;
+	border-collapse: separate;
+	border-spacing: 5px;
+	border: solid red;
+	width: 300px;
+}
+
+td{
+	border: solid red;
+}
+
+.col1{
+	background-color: red;
+}
+
+.col2{
+	background-color: red;
+}
+
+ul{
+	list-style-type: square;
+}
+
+a:hover{
+	background-color: red;
+}
+
+i{
+	color: magenta;	
+}
+
+tr:hover{
+	background-color: grey;
+}

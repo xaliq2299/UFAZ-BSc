@@ -1,0 +1,7 @@
+1.4) user time
+1.5) processes + nice
+1.6) goes fast
+2) free first decreases after killing increases
+3.2) Yes, for so we have smtms non-zero values
+3.3) if we give bigger values as argument the values for so and si will definitely change producing bigger and non-values.
+5.1-3) increasing the argument loops are going more slowly and bandwidth numbers are both inc. and dec.

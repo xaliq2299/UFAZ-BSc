@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practical Work 5</title>
+	<style type="text/css">
+		body{
+			background-color: grey; 
+			margin: 0; padding: 0;
+			font-family: Arial;
+			font-size: 10;
+			width: 100vw; height: 100vh;
+		}
+		.GridContainer{
+			display: grid;
+			grid-template-rows:1fr 5fr 1fr;
+			grid-template-columns:1fr 3fr 1fr;
+			padding: 5px 10px 10px 5px;
+			box-sizing: border-box;
+			grid-template-areas: "R1C1to3 R1C1to3 R1C1to3"
+								 "R2C1 R2C2 R2C3"
+								 "R3C1to3 R3C1to3 R3C1to3";
+			grid-gap: 5px;
+		}
+		#R1C1to3{grid-area: R1C1to3; background-color: red; min-height: 50px}
+		#R2C1{grid-area: R2C1; background-color: violet; min-width: min-width: 50px; }
+		#R2C2{grid-area: R2C2; background-color: yellow;}
+		#R2C3{grid-area: R2C3; background-color: violet; min-width: 50px; }
+		#R3C1to3{grid-area: R3C1to3; background-color: red; min-height: 50px;}
+	</style>
+</head>
+<body class="GridContainer">	
+	<header class="header" id="R1C1to3">
+		<h3>Header</h3>
+		<p>The first section</p>
+	</header>
+	<nav class="nav" id="R2C1">
+		<h3>Navigation</h3>
+		<p>Link1 Link2 Link3</p>
+	</nav>
+	<article class="article" id="R2C2">
+		<h3>Article</h3>
+		<p>The Main part</p>
+	</article>
+	<aside class="aside" id="R2C3">
+		<h3>Aside</h3>
+		<p>The secondary things</p>
+	</aside>
+	<footer class="footer" id="R3C1to3">
+		<h3>Footer</h3>
+		<p>The last section</p>
+	</footer>
+</body>
+</html>

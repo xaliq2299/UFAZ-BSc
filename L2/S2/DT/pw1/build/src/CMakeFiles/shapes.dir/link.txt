@@ -1,0 +1,2 @@
+/usr/bin/ar qc libshapes.a  CMakeFiles/shapes.dir/circle.c.o CMakeFiles/shapes.dir/point.c.o CMakeFiles/shapes.dir/rectangle.c.o
+/usr/bin/ranlib libshapes.a

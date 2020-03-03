@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/Sieve_method.dir/main.c.o  -o Sieve_method -rdynamic ../src/libshapes.a -lm 

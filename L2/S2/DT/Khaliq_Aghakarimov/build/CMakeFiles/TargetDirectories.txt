@@ -1,0 +1,8 @@
+/home/xaliq/Khaliq_Aghakarimov/build/CMakeFiles/test.dir
+/home/xaliq/Khaliq_Aghakarimov/build/CMakeFiles/edit_cache.dir
+/home/xaliq/Khaliq_Aghakarimov/build/CMakeFiles/rebuild_cache.dir
+/home/xaliq/Khaliq_Aghakarimov/build/CMakeFiles/string_test.dir
+/home/xaliq/Khaliq_Aghakarimov/build/string/CMakeFiles/test.dir
+/home/xaliq/Khaliq_Aghakarimov/build/string/CMakeFiles/edit_cache.dir
+/home/xaliq/Khaliq_Aghakarimov/build/string/CMakeFiles/rebuild_cache.dir
+/home/xaliq/Khaliq_Aghakarimov/build/string/CMakeFiles/string.dir

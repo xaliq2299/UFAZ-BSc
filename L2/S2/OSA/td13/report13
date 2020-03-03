@@ -1,0 +1,44 @@
+Exercise 1
+1.2) From run to run different outputs:
+a)	->add(0, 1)
+  	<-add(0, 1)
+      	    	->add(0, 1)
+       	 	    <-add(0, 1)
+
+b) 				->add(0, 1)
+             	<-add(0, 1)
+	->add(0, 1)
+	<-add(0, 1)
+
+Exercise 2
+2.1) Nothing special, just more vectors are added this time (the same as the number of loops).
+2.2) Yes
+
+Exercise 3
+3.1) Each thread tries to create some number of vectors.
+3.2) n=1
+
+Exercise 4
+4.1) The locks are applied correctly.
+
+Exercise 5
+5.1) 0.19-0.20 seconds
+5.2) The total time increases when we increase number of loops or number of threads.
+
+Exercise 6
+6.1) Turning on parallelism (-p option) will cause the reduction of running time.
+6.2) When each thread works on adding different vectors (-p option) the performance for sure will increase because parallelism is about the processes that run in parallel. This of course will decrease running time.
+
+Exercise 7
+7.1) No because in any case it's in top, even if we insist it with goto.
+7.2) Compared to global order approach ( in 5.2) ) vector-try-wait runs a bit faster.
+7.3) The number of retries increases as the number of threads increases.
+
+Exercise 8
+8.1) It just locks everyting without checking whether the source and destination vectors are different. This decreases efficiency which causes the total time to increase running it either with or without -p option.
+
+Exercise 9
+9.1-9.2) This version doesn't provide the exact same semantics as the other versions, because there's no synchronisation unlike the other programs.
+
+Exercise 10
+10.1) This version will be the slowest one among all. With -p option running time becomes less, but it is again more compared to the other programs with -p option.

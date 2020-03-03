@@ -1,0 +1,88 @@
+Exercise 1
+It's obvious that there's a data race in the given code, because 2 threads (main and the new created one)
+try to access one variable (balance) without any lock or snychronisation.
+The command <valgrind --tool=helgrind main-race> outputs:
+	==9174== Helgrind, a thread error detector
+	==9174== Copyright (C) 2007-2015, and GNU GPL'd, by OpenWorks LLP et al.
+	==9174== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+	==9174== Command: main-race
+	==9174== 
+	==9174== ---Thread-Announcement------------------------------------------
+	==9174== 
+	==9174== Thread #1 is the program's root thread
+	==9174== 
+	==9174== ---Thread-Announcement------------------------------------------
+	==9174== 
+	==9174== Thread #2 was created
+	==9174==    at 0x51643DE: clone (clone.S:74)
+	==9174==    by 0x4E46149: create_thread (createthread.c:102)
+	==9174==    by 0x4E47E83: pthread_create@@GLIBC_2.2.5 (pthread_create.c:679)
+	==9174==    by 0x4C34BB7: ??? (in /usr/lib/valgrind/vgpreload_helgrind-amd64-linux.so)
+	==9174==    by 0x400BAE: Pthread_create (mythreads.h:51)
+	==9174==    by 0x400C72: main (main-race.c:14)
+	==9174== 
+	==9174== ----------------------------------------------------------------
+	==9174== 
+	==9174== Possible data race during read of size 4 at 0x60208C by thread #1
+	==9174== Locks held: none
+	==9174==    at 0x400C73: main (main-race.c:15)
+	==9174== 
+	==9174== This conflicts with a previous write of size 4 by thread #2
+	==9174== Locks held: none
+	==9174==    at 0x400C2D: worker (main-race.c:8)
+	==9174==    by 0x4C34DB6: ??? (in /usr/lib/valgrind/vgpreload_helgrind-amd64-linux.so)
+	==9174==    by 0x4E476B9: start_thread (pthread_create.c:333)
+	==9174==  Address 0x60208c is 0 bytes inside data symbol "balance"
+	==9174== 
+	==9174== ----------------------------------------------------------------
+	==9174== 
+	==9174== Possible data race during write of size 4 at 0x60208C by thread #1
+	==9174== Locks held: none
+	==9174==    at 0x400C7C: main (main-race.c:15)
+	==9174== 
+	==9174== This conflicts with a previous write of size 4 by thread #2
+	==9174== Locks held: none
+	==9174==    at 0x400C2D: worker (main-race.c:8)
+	==9174==    by 0x4C34DB6: ??? (in /usr/lib/valgrind/vgpreload_helgrind-amd64-linux.so)
+	==9174==    by 0x4E476B9: start_thread (pthread_create.c:333)
+	==9174==  Address 0x60208c is 0 bytes inside data symbol "balance"
+	==9174== 
+	==9174== 
+	==9174== For counts of detected and suppressed errors, rerun with: -v
+	==9174== Use --history-level=approx or =none to gain increased speed, at
+	==9174== the cost of reduced accuracy of conflicting-access information
+	==9174== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+1.1) Yes, it points to the right lines of code: for ex, line 14 where new thread is created.
+1.2) It reports about the creation of 2 threads. Then it shows that possible data race can occur during read of size 4 at address 0x06208C which is
+	 the address of variable balance. And then one can see that it conflicts with a previous write of
+	 size 4 this time by thread 2 (newly created thread). This again happens because of the accessing a shared memory location without any locks. So that's why at the end one can see 2 errors occured.
+
+Exercise 2
+2.1) If we remove one of the offending lines (or one of the lines with unprotected access), then there won't be any race. Besides helgrind shows there's 0 error.
+2.2) Adding a lock around one of the shared variable: helgrind reports that it observed a lock at specific address. Then one can see that there's again a data race (with 2 errors at the end). Because we applied lock only for one part of code. 
+Adding a lock around both of the shared variables: This will solve our problem. We don't have any data race problem since eveything is synchronised. One can see 0 errors at the end.
+
+Exercise 3
+3.1) Most probably the order or the way in which the locks are applied on threads is not correct.
+
+Exercise 4
+4.1) As helgrind reports: Observed (incorrect) order at some specific address which is one of our threads. There's acquisition of lock. So our prediction in Ex3 was correct. Besides one can see that at the end there's 1 error.
+
+Exercise 5
+5.1) In fact main-deadlock-global.c doesn't have the same problem that main-deadlock.c has: it's handled adding one more lock.
+5.2) So helgrind shouldn't report the same error, but contrarily it does.
+5.3) The reason for this is that helgrind make distinctions between re-entrant (some piece of code that's going to be re-entered) and thread safe functions. Some functions used in this program are not re-entrant, but thread-safe. Note: There are some functions whose thread safe variants are developed (like strtok and strtok_r).
+
+Exercise 6
+6.1) This code seems to be inefficent: It tries to wait for the child to finish its job (which takes a long time); No synchronisation is used. The parent ends up printing an appropriate message. Besides there's while loop in the program and if this while loop has some other condition the program will never enter the handler of thread #2.
+
+Exercise 7
+7.1) It doesn't report any error, just prints the output of the execution.
+7.2) The code is correct, but inefficient as explained in Ex6.
+
+Exercise 8
+8.1) This code is preferred, because it uses some locks to synchronise the signalling.
+8.2) It's both since it works both correctly and efficiently.
+
+Exercise 9
+9.1) No, one can see 0 errors at the end, in ERROR_SUMMARY.

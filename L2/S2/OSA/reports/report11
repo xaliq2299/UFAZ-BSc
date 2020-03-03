@@ -1,0 +1,33 @@
+Exercise 1
+1.1) It handles producer-consumer problem efficiently showing the output similar to the one in README (if option -v is executed).
+
+Exercise 2
+2.1) The behaviour of the code doesn't change necessarily with larger buffers since we are dealing only with one producer and one consumer.
+2.2) The value of num_full will definitely change because of consumer string: Now items up to size of buffer can be placed inside this buffer.
+
+Exercise 3
+Sorry, but impossible to run on Mac.
+
+Exercise 4
+4.1) The execution of the given command (with 3 consumer, 1 producer and 1 items) took ~13seconds to execute, because of pausing strings for each consumer.
+
+Exercise 5
+5.1) Now we run again the same command that's in Ex4, but this time with buffer size 3. We increased the size of our buffer and it affected the performance: it's reduced to ~11 seconds. Note that in Ex4 we worked with buffer of size 1, which means we could place to our buffer only 1 item at a time. This of course reduced the efficiency and increased the running time.
+
+Exercise 6
+6.1) It's the same command, but with different location of sleep (this time in c6) and with buffer size 1. The total time is ~5 seconds which is the best result obtained up to now. Because of the new location of sleep, after taking something off the queue a consumer can do something with it. So it reduces the running time.
+
+Exercise 7
+7.1) Increasing buffer size from 1 to 3 didn't necessarily affect to the running time (unlikely in Ex5).
+
+Exercise 8
+8.1) One can write a sleep string as <0,0,0,0,0,0,1:0,0,0,0,0,0,1> which is considered for two consumers. But in our case we have only 1 consumer. So this will cause a problem, but the program will terminate with an appropriate message. Another configuration would be putting some negative number inside sleep string. For ex: for one consumer <-1,0,0,0,1,0,1>. In this case the program will get stuck.
+
+Exercise 9
+9.1) Again one can try the string with negative value in it.
+
+Exercise 10
+10.1) In 2 consumer case: -C 1,1,1,0,0,0,0:0,0,0,1,1,1,1. This string will cause an error: tried to get an empty buffer.
+
+Exercise 11
+11.1) Possibility of filling a non empty buffer or getting an empty buffer can occur since no synchronisation is available.

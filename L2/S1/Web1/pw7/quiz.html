@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz on HTML and CSS languages</title>
+	<style type="text/css">
+		h1{ text-align: center; }
+		input[type="Email"]:invalid{ border-color: solid red; }
+		textarea{width: 300px; height: 200px;}
+	</style>
+</head>
+<body>
+	<h1> QUIZ </h1>
+	<p>Note: This is a Quiz for all Computer Science students to test their knowledge on HTML and CSS languages.</p>
+	<form action= "script.php" method="post">
+		<fieldset>
+			Full name <input text="Full name" name="fullname" placeholder="Enter your full name"> <br>
+			Surname <input type="Surname" name="surname" placeholder="Enter your surname"> <br>
+			Email address <input type="Email" name="email" placeholder="Your email" required>
+		</fieldset>
+		<input type="date" name="date"><br>
+		
+		Is HTML a programming language ?<br>
+		<label for="yes"><input type="radio" name="choice1" value="Yes" id="yes"></label>Yes<br>
+		
+		<label for="yes"></label><input type="radio" name="choice1" value="Yes" id="yes">Yes<br>
+		<label for="no"></label><input type="radio" name="choice2" value="No" id="no">No<br>
+		
+		<textarea>Enter your HTML or CSS code</textarea> <br>		<button>Send</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			width: 100vw; height: 500vh; background-color: grey; font-family: Arial; font-size: 10; margin: 0;}
+		header{
+			display: flex; background-color: green; border: 1px; min-width:60px; max-height:80px; }
+		nav{
+			display: flex; background-color: yellow; border: 1px solid black; width: 160px; float: left;}
+		article{
+			display: flex; background-color: blue;	width: 60%; height: 400px; border: 1px solid black; float:left;}
+		aside{
+			display: flex; width: 160px;float:left;background-color: yellow;}
+		footer{
+			display: flex; background-color: green; max-width: 80px; min-height: 60px ;border: 1px solid black;}
+		div:after{
+			content: '';display: block;clear: both;}
+		article{
+			display: grid;
+			width: 100%;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+		.body{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.main{
+			display: flex;
+			flex-direction: row;
+			flex-grow: 2;
+			flex-shrink: 4;
+			flex-basis: auto;
+			min-height: 400px;
+		}
+	</style>
+</head>
+	
+<body>
+	<div class="body">
+	<header>
+		<h3>Header</h3>
+		<p>The first section</p>
+	</header>
+	<div class="main">
+		<nav>
+			<h3>Navigation</h3>
+			<p>Link1 Link2 Link3</p>
+		</nav>
+		<article>
+			<h3>Article</h3>
+			<p>actgtctagctacgtagcatcgatcagcatcgctagc</p>
+		</article>
+		<aside>
+			<h3>Aside</h3>
+		</aside>
+	</div>
+	<footer>
+		<h3>Footer: The last section</h3>
+	</footer>
+	</div>
+</body>
+</html>

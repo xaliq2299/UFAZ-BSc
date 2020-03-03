@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/main_cal.dir/main_calc.c.o  -o main_cal -rdynamic pol/libpol.a -lm 

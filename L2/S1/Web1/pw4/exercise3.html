@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>exercise3</title>
+	<script type="text/javascript">
+		sum=0;
+		creditCardNumber = "79927398713";
+		console.log("Credit Card Number: "+creditCardNumber);
+		for(i=creditCardNumber.length-2;i>=0;i--){
+			n=parseInt(creditCardNumber[i], 10);
+			if(i%2 != 0){
+				n*=2;  if(n > 9)	n-=9;
+			}
+			sum+=n;		
+		}
+		x=parseInt(creditCardNumber[creditCardNumber.length-1], 10);
+		if( (sum+x)%10 == 0)
+			console.log("Valid");
+		else
+			console.log("Invalid");
+	</script>
+</head>
+<body>
+
+</body>
+</html>

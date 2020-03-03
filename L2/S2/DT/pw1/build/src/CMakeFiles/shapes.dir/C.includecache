@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/../include/circle.h
+stdio.h
+-
+stdlib.h
+-
+point.h
+../src/../include/point.h
+
+../src/../include/point.h
+math.h
+-
+stdlib.h
+-
+time.h
+-
+
+../src/../include/rectangle.h
+stdio.h
+-
+circle.h
+../src/../include/circle.h
+
+/home/xaliq/CS/L2/S2/DT/pw1/src/circle.c
+circle.h
+/home/xaliq/CS/L2/S2/DT/pw1/src/circle.h
+point.h
+/home/xaliq/CS/L2/S2/DT/pw1/src/point.h
+
+/home/xaliq/CS/L2/S2/DT/pw1/src/point.c
+stdio.h
+-
+point.h
+/home/xaliq/CS/L2/S2/DT/pw1/src/point.h
+
+/home/xaliq/CS/L2/S2/DT/pw1/src/rectangle.c
+rectangle.h
+/home/xaliq/CS/L2/S2/DT/pw1/src/rectangle.h
+

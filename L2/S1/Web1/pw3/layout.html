@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pw3</title>
+	<style type="text/css">
+	/*	*{box-sizing: border-box;} */
+		.all{border-left: 1px solid grey; border-right: 1px solid grey;}
+		h1{text-align: center; background: #008B8B; color: white;}
+		nav{background-color: #107757; color: white;}
+		
+		article{ margin: 5px 10px 10px 5px; border: 1px solid black; width: 65%;}
+		h3.article{ margin: 5px 10px 10px 10px; background: aqua; color: white; display: inline-block;}
+		
+		div#section1{ margin: 5px 10px 10px 5px; background-color: lightgrey; border: 1px solid black;}
+		h4#section1{ margin: 5px 5px 5px 5px; background-color: aqua; display: inline-block; color: white;}
+		.headerOfArticle1{ margin: 5px 5px 5px 5px; background-color: #008B8B; color: white;}
+		section.section1{ padding: 5px; margin: 5px 5px 5px 5px; border: 1px solid black;}
+		.footerOfSection1{ margin: 5px 5px 5px 5px; background-color: magenta; color: white;}
+		
+		div#section2{ margin: 5px 10px 10px 5px; background-color: lightgrey; border: 1px solid black;}
+		h4#section2{ margin: 5px 5px 5px 5px; background-color: aqua; display: inline-block; color: white;}
+		.headerOfArticle2{ margin: 5px 5px 5px 5px; background-color: #008B8B; color: white;}
+		section.section2{ margin: 10px 5px 25px 5px; border: 1px solid black;}
+
+		div.sidebar{ margin: 5px 10px 10px 5px; border: solid black 1px; width: 30%;}
+		h4.sidebar{background-color: aqua; display: inline-block; color: white; text-align: left;}
+		#aside1{border: solid black 1px; background-color: lightgrey; margin: 5px 10px 10px 5px;}
+		#aside2{border: solid black 1px; background-color: lightgrey; margin: 5px 10px 10px 5px;}
+		.mainFooter{background-color: magenta; text-align: center;}
+
+		/* span usage */
+		#span{
+			background-color: aqua;
+		}
+		/* positioning */
+		article{
+			float:left;
+		}
+		div.sidebar{
+			float: left;
+		}
+		.mainFooter{
+			clear:both;
+		}
+	</style>
+</head>
+<body>
+	<div class="all">
+		<header>
+			<h1><strong id="span">HEADER</strong> : Semantique HTML5 Design CSS3</h1>
+		</header>
+		<nav>
+			<h4><span id="span">NAV</span></h4>
+			<p>LIEN 1     LIEN 2     LIEN 3     LIEN 4</p>
+		</nav>
+		<article class="article">
+			<h3 class="article">ARTICLE</h3>
+			<div id="section1">
+				<h4 id="section1">SECTION</h4>
+				<header class="headerOfArticle1">
+					<h3><span id="span">HEADER</span> : Article 1</h3>
+				</header>
+				<section class="section1">
+					<p>Inceptos hac taciti nunc nisl at penatibus nec. Consequat per dolor libero vitae magnis imperdiet, faucibus risus elit conubia cubilia. Habitant a nostra vestibulum. Nascetur risus dis curabitur dignissim donec erat nulla eleifend adipiscing. Erat augue torquent lectus fermentum semper praesent vitae rhoncus egestas adipiscing vestibulum cursus. Urna fames, consectetur placerat. Gravida erat nisi eros tincidunt eros elit netus. Habitasse.
+					</p>
+				</section>
+				<footer class="footerOfSection1">
+					<h4><span id="span">FOOTER</span> : </h4>
+					<p>cfvudifdkjcslmcdiojfuvdkmiojfdhbvfnjckdifuc</p>
+				</footer>
+			</div>
+			<div id="section2">
+				<h4 id="section2">SECTION</h4>
+				<header class="headerOfArticle2">
+					<h3><span id="span">HEADER</span> : Article 2</h3>
+				</header>
+				<section class="section2">
+					<p>Inceptos hac taciti nunc nisl at penatibus nec. Consequat per dolor libero vitae magnis imperdiet, faucibus risus elit conubia cubilia. Habitant a nostra vestibulum. Nascetur risus dis curabitur dignissim donec erat nulla eleifend adipiscing. Erat augue torquent lectus fermentum semper praesent vitae rhoncus egestas adipiscing vestibulum cursus. Urna fames, consectetur placerat. Gravida erat nisi eros tincidunt eros elit netus. Habitasse.</p>
+				</section>				
+			</div>
+		</article>
+		<div class="sidebar">
+			<h4 class="sidebar">SIDEBAR</h4>
+			<aside id="aside1">
+				<h3><span id="span">ASIDE</span> Titre 1</h3>
+				<h3>Sous-etre 1</h3>
+				<p>Sometimes I can feel my bones straining under the weight of all the lives I'm not living.</p>
+				<h3>Sous-etre 2</h3>
+				<p>Sometimes I can feel my bones straining under the weight of all the lives I'm not living.</p>
+			</aside>
+			<aside id="aside2">
+				<h3><span id="span">ASIDE</span> Titre 2</h3>
+				<h3>Sous-etre 1</h3>
+				<p>Sometimes I can feel my bones straining under the weight of all the lives I'm not living.</p>	
+			</aside>
+		</div>
+		<footer class="mainFooter">
+			<h4><span id="span">FOOTER:</span></h4>
+			<p>cjfkldjfvklokvjb</p>
+		</footer>
+	</div>
+</body>
+</html>

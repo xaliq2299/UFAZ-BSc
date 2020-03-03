@@ -1,0 +1,31 @@
+Start testing: Apr 12 22:53 +04
+----------------------------------------------------------
+1/1 Testing: String_Manipulation
+1/1 Test: String_Manipulation
+Command: "/home/xaliq/Khaliq_Aghakarimov/build/string_test"
+Directory: /home/xaliq/Khaliq_Aghakarimov/build
+"String_Manipulation" start time: Apr 12 22:53 +04
+Output:
+----------------------------------------------------------
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      3      3    n/a      0        0
+               tests      6      6      6      0        0
+             asserts     12     12     12      0      n/a
+
+Elapsed time =    0.000 seconds
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"String_Manipulation" end time: Apr 12 22:53 +04
+"String_Manipulation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 12 22:53 +04
