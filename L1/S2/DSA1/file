@@ -1,0 +1,8 @@
+  A B  C D  E F G
+A 0 4  3 i  7 i i
+B 4 0  6 5  i i i
+C      0 11 8 i i
+D        0  2 2 10
+E           0 i 5
+F             0 3
+G               0

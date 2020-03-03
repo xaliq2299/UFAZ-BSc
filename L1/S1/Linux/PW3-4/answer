@@ -1,0 +1,30 @@
+Exercise 1
+Question 1:
+1)find -name "[aA]*[3-6]"
+2) a)find -ctime +30
+   b)find -ctime 30
+   c)find -ctime -30
+3) find -cnewer answer
+   find -iname answer(Orxan's)
+4)find -d
+5)find -size -5G (latter is the size)
+6)find -name "*~" -ctime +14 -delete
+Question 2:
+Cos we use xargs it executed all the commandlines from the st.input 
+
+EXERCISE 2
+1)printenv
+2)export
+3)printenv PATH, HOME
+
+EXERCISE 3
+export PATH=~/OS/PW3-4/bin/
+to make permanent: export PATH=$PATH:~/OS/PW3-4/bin/
+
+EXERCISE 4
+echo "alias p='ps -ef | more' ">>~/.bashsc
+
+EXERCISE 5
+
+
+EXERCISE 6

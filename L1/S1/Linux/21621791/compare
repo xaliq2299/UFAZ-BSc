@@ -1,0 +1,10 @@
+#!/bin/bash
+
+a=$(diff -s $1 $2)
+
+if [[ $a == "Files $1 and $2 are identical" ]]; then
+	echo "Identical"
+else
+	echo "Different"
+fi
+clear

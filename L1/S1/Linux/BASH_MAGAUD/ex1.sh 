@@ -1,0 +1,5 @@
+#!/bin/bash
+echo --- Hello $USER
+echo -n "Today is: "; date
+echo "root account has the following shell: " \
+$(grep "^root" /etc/passwd | cut -d: -f7) #-d: without :

@@ -1,0 +1,27 @@
+#define SIZE 5
+Dynamically allocate an array of SIZE integers (original array)
+declare empty_index=0 (The new number will be put in this place)
+while True
+   print "Do u want to enter a new value?"
+   
+   if yes
+      get a new value
+      if empty_index is less than SIZE (which means we have free place)   
+         put new value in (empty_index)th place of your array
+         increment empty_index (because now the next place will be free)
+      else (means we don't have free place)
+         create a new temporary array of size SIZE
+         copy all numbers of your original array to this temporary array
+         increment SIZE by 5
+         dynamically allocate a new array (actaully ur original array) with new size (SIZE+5)
+         copy all numbers of temporary array to new created original array (of size SIZE+5)
+         delete temporary array
+         put new value in (empty_index)th place of your array
+         increment empty_index (because now the next place will be free)       	
+      end if
+   if no
+      end
+   else   
+      continue
+   end if
+end while

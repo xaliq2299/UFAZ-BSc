@@ -1,0 +1,51 @@
+LOCUS       Z78531                   748 bp    DNA     linear   PLN 30-NOV-2006
+DEFINITION  C.fasciculatum 5.8S rRNA gene and ITS1 and ITS2 DNA.
+ACCESSION   Z78531
+VERSION     Z78531.1  GI:2765656
+KEYWORDS    5.8S ribosomal RNA; 5.8S rRNA gene; internal transcribed spacer;
+            ITS1; ITS2.
+SOURCE      Cypripedium fasciculatum
+  ORGANISM  Cypripedium fasciculatum
+            Eukaryota; Viridiplantae; Streptophyta; Embryophyta; Tracheophyta;
+            Spermatophyta; Magnoliophyta; Liliopsida; Asparagales; Orchidaceae;
+            Cypripedioideae; Cypripedium.
+REFERENCE   1
+  AUTHORS   Cox,A.V., Pridgeon,A.M., Albert,V.A. and Chase,M.W.
+  TITLE     Phylogenetics of the slipper orchids (Cypripedioideae:
+            Orchidaceae): nuclear rDNA ITS sequences
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 748)
+  AUTHORS   Cox,A.V.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (19-AUG-1996) Cox A.V., Royal Botanic Gardens, Kew,
+            Richmond, Surrey TW9 3AB, UK
+FEATURES             Location/Qualifiers
+     source          1..748
+                     /organism="Cypripedium fasciculatum"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:53040"
+     misc_feature    1..380
+                     /note="internal transcribed spacer 1"
+     gene            381..550
+                     /gene="5.8S rRNA"
+     rRNA            381..550
+                     /gene="5.8S rRNA"
+                     /product="5.8S ribosomal RNA"
+     misc_feature    551..748
+                     /note="internal transcribed spacer 2"
+ORIGIN      
+        1 cgtaacaagg tttccgtagg tgaacctgcg gaaggatcat tgttgagaca gcagaacata
+       61 cgatcgagtg aatccggagg acccgtggtt acacggctca ccgtggcttt gctctcgtgg
+      121 tgaacccggt ttgcgaccgg gccgcctcgg gaactttcat ggcgggtttg aacgtctagc
+      181 gcggcgcagt ttgcgccaag tcatatggag cgtcaccgat ggatggcatt tttgtcaaga
+      241 aaaactcgga ggggcggcgt ctgttgcgcg tgccaatgaa tttatgacga ctctcggcaa
+      301 cgggatatct ggctcttgca tcgatgaaga acgcagcgaa atgcgataag tggtgtgaat
+      361 tgcagaatcc cgcgaaccat cgagtctttg aacgcaagtt gcgcccgagg ccatcaggct
+      421 aagggcacgc ctgcctgggc gtcgtgtgct gcgtctctcc tgataatgct tgattggcat
+      481 gcggctagtc tgtcattgtg aggacgtgaa agattggccc cttgcgccta ggtgcggcgg
+      541 gtctaagcat cggtgttctg atggcccgga acttggcagt aggtggagga tgctggcagc
+      601 cgcaaggctg ccgttcgaat cccccgtgtt gtcgtactcg tcaggcctac agaagaacct
+      661 gtttgaaccc ccagtggacg caaaaccgcc ctcgggcggt gatttccatt cagatgcgac
+      721 cccagtcagg cgggccaccc gtgagtaa
+//
+

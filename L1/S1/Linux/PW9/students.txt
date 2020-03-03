@@ -1,0 +1,10 @@
+Name|Class|Result
+Lazare|6eme|12
+Cage|6eme|14
+Cladera|6eme|16
+Jougue|6eme|18
+Pingouin|6eme|8
+Dupont|5eme|10
+Durant|5eme|11
+Petit|5eme|7
+Voisin|5eme|1
