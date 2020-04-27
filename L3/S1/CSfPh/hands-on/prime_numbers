@@ -1,0 +1,12 @@
+Hands-on - Prime numbers
+Write an algorithm that displays a list of the prime numbers between 1 and 100
+
+Several solutions may exist. The following is the one you suggested this morning
+
+FOR k FROM 2 TO 100
+   FOR j FROM 2 TO k-1
+      isPrime = True
+      IF (k%j==0)
+         isPrime = False
+   IF isPrime
+      DISPLAY k
