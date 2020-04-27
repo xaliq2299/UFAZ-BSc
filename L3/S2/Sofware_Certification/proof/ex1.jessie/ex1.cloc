@@ -1,0 +1,73 @@
+[_C_4]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/ex1.c"
+line = 28
+begin = 12
+end = 24
+
+[_C_5]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/"
+line = 0
+begin = -1
+end = -1
+
+[_C_9]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/ex1.c"
+line = 18
+begin = 11
+end = 26
+
+[_C_6]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/ex1.c"
+line = 6
+begin = 11
+end = 26
+
+[_C_3]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/ex1.c"
+line = 30
+begin = 12
+end = 24
+
+[_C_7]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/ex1.c"
+line = 12
+begin = 11
+end = 26
+
+[_C_10]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/ex1.c"
+line = 22
+begin = 11
+end = 26
+
+[_C_8]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/"
+line = 0
+begin = -1
+end = -1
+
+[_C_2]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/ex1.c"
+line = 35
+begin = 12
+end = 24
+
+[max3]
+name = "Function max3"
+file = "/home/xaliq/CS/L3/S2/Certification/proof/ex1.c"
+line = 25
+begin = 4
+end = 8
+
+[_C_1]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/ex1.c"
+line = 37
+begin = 12
+end = 24
+
+[_C_11]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/"
+line = 0
+begin = -1
+end = -1
+

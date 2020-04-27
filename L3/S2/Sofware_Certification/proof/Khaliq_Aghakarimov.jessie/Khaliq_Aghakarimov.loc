@@ -1,0 +1,980 @@
+[JC_94]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 85
+begin = 13
+end = 48
+
+[JC_73]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 71
+begin = 22
+end = 33
+
+[JC_63]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 65
+begin = 10
+end = 76
+
+[JC_80]
+kind = ArithOverflow
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 76
+begin = 14
+end = 17
+
+[JC_51]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/Khaliq_Aghakarimov.jc"
+line = 91
+begin = 6
+end = 766
+
+[JC_71]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 72
+begin = 19
+end = 61
+
+[JC_45]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 55
+begin = 15
+end = 23
+
+[JC_123]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/Khaliq_Aghakarimov.jc"
+line = 226
+begin = 9
+end = 1095
+
+[JC_106]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 91
+begin = 19
+end = 23
+
+[JC_113]
+kind = ArithOverflow
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 96
+begin = 25
+end = 30
+
+[JC_116]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 93
+begin = 17
+end = 25
+
+[JC_64]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 66
+begin = 10
+end = 74
+
+[JC_133]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_99]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 85
+begin = 13
+end = 48
+
+[JC_85]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 71
+begin = 19
+end = 23
+
+[JC_126]
+kind = PointerDeref
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 107
+begin = 23
+end = 31
+
+[JC_31]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 48
+begin = 9
+end = 55
+
+[JC_17]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 18
+begin = 11
+end = 26
+
+[JC_122]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/Khaliq_Aghakarimov.jc"
+line = 226
+begin = 9
+end = 1095
+
+[max3_ensures_first_case]
+name = "Function max3"
+behavior = "Behavior `first_case'"
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 25
+begin = 4
+end = 8
+
+[JC_81]
+kind = PointerDeref
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 76
+begin = 12
+end = 18
+
+[JC_55]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 64
+begin = 38
+end = 46
+
+[JC_138]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 101
+begin = 22
+end = 31
+
+[monotonic_ensures_default]
+name = "Function monotonic"
+behavior = "default behavior"
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 89
+begin = 4
+end = 13
+
+[JC_134]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/Khaliq_Aghakarimov.jc"
+line = 190
+begin = 9
+end = 1075
+
+[JC_137]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 101
+begin = 19
+end = 23
+
+[JC_48]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 53
+begin = 20
+end = 29
+
+[JC_23]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 47
+begin = 37
+end = 45
+
+[JC_22]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 47
+begin = 10
+end = 33
+
+[JC_121]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_5]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_125]
+kind = ArithOverflow
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 107
+begin = 25
+end = 30
+
+[JC_67]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 66
+begin = 10
+end = 74
+
+[JC_9]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_75]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_24]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 47
+begin = 10
+end = 45
+
+[JC_25]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[doubled_safety]
+name = "Function doubled"
+behavior = "Safety"
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 51
+begin = 5
+end = 12
+
+[JC_78]
+kind = ArithOverflow
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 75
+begin = 16
+end = 24
+
+[JC_41]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/Khaliq_Aghakarimov.jc"
+line = 91
+begin = 6
+end = 766
+
+[JC_74]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 71
+begin = 19
+end = 33
+
+[JC_47]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 53
+begin = 17
+end = 21
+
+[JC_52]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/Khaliq_Aghakarimov.jc"
+line = 91
+begin = 6
+end = 766
+
+[JC_26]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 47
+begin = 10
+end = 33
+
+[JC_8]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_54]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 64
+begin = 11
+end = 34
+
+[JC_79]
+kind = PointerDeref
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 76
+begin = 7
+end = 11
+
+[JC_13]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 12
+begin = 11
+end = 26
+
+[JC_130]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 91
+begin = 19
+end = 23
+
+[JC_82]
+kind = ArithOverflow
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 75
+begin = 25
+end = 28
+
+[JC_87]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 71
+begin = 19
+end = 33
+
+[JC_11]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 6
+begin = 11
+end = 26
+
+[JC_98]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 85
+begin = 40
+end = 48
+
+[JC_70]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_15]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_36]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 53
+begin = 17
+end = 21
+
+[max3_ensures_first1_case]
+name = "Function max3"
+behavior = "Behavior `first1_case'"
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 25
+begin = 4
+end = 8
+
+[increasing_ensures_default]
+name = "Function increasing"
+behavior = "default behavior"
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 69
+begin = 4
+end = 14
+
+[JC_104]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_91]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 85
+begin = 13
+end = 36
+
+[JC_39]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_112]
+kind = PointerDeref
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 96
+begin = 16
+end = 20
+
+[JC_40]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/Khaliq_Aghakarimov.jc"
+line = 91
+begin = 6
+end = 766
+
+[JC_135]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/Khaliq_Aghakarimov.jc"
+line = 190
+begin = 9
+end = 1075
+
+[JC_83]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 73
+begin = 17
+end = 27
+
+[JC_35]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 54
+begin = 17
+end = 58
+
+[JC_132]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 91
+begin = 19
+end = 31
+
+[JC_27]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 47
+begin = 10
+end = 33
+
+[JC_115]
+kind = ArithOverflow
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 95
+begin = 36
+end = 39
+
+[JC_109]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_107]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 91
+begin = 22
+end = 31
+
+[JC_69]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_124]
+kind = PointerDeref
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 107
+begin = 16
+end = 20
+
+[JC_38]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 53
+begin = 17
+end = 29
+
+[JC_12]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 6
+begin = 11
+end = 26
+
+[JC_6]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_127]
+kind = ArithOverflow
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 106
+begin = 36
+end = 39
+
+[max3_ensures_first2_case]
+name = "Function max3"
+behavior = "Behavior `first2_case'"
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 25
+begin = 4
+end = 8
+
+[JC_44]
+kind = ArithOverflow
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 57
+begin = 23
+end = 26
+
+[JC_4]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_62]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_101]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_88]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_129]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 92
+begin = 19
+end = 61
+
+[JC_42]
+kind = ArithOverflow
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 58
+begin = 9
+end = 12
+
+[max3_ensures_second_case]
+name = "Function max3"
+behavior = "Behavior `second_case'"
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 25
+begin = 4
+end = 8
+
+[JC_110]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/Khaliq_Aghakarimov.jc"
+line = 190
+begin = 9
+end = 1075
+
+[JC_103]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_46]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 54
+begin = 17
+end = 58
+
+[JC_141]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/Khaliq_Aghakarimov.jc"
+line = 226
+begin = 9
+end = 1095
+
+[JC_61]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 64
+begin = 11
+end = 46
+
+[JC_32]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 48
+begin = 9
+end = 55
+
+[JC_56]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 64
+begin = 11
+end = 46
+
+[JC_33]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[max3_ensures_second2_case]
+name = "Function max3"
+behavior = "Behavior `second2_case'"
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 25
+begin = 4
+end = 8
+
+[JC_65]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/"
+line = 0
+begin = -1
+end = -1
+
+[JC_118]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 101
+begin = 19
+end = 23
+
+[JC_105]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 92
+begin = 19
+end = 61
+
+[JC_140]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_29]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 47
+begin = 10
+end = 45
+
+[max3_ensures_default]
+name = "Function max3"
+behavior = "default behavior"
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 25
+begin = 4
+end = 8
+
+[max3_ensures_second1_case]
+name = "Function max3"
+behavior = "Behavior `second1_case'"
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 25
+begin = 4
+end = 8
+
+[JC_68]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/"
+line = 0
+begin = -1
+end = -1
+
+[JC_7]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_16]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_96]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 85
+begin = 13
+end = 36
+
+[JC_43]
+kind = PointerDeref
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/Khaliq_Aghakarimov.jc"
+line = 103
+begin = 22
+end = 231
+
+[JC_2]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_95]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_93]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 85
+begin = 40
+end = 48
+
+[JC_97]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 85
+begin = 13
+end = 36
+
+[JC_84]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 72
+begin = 19
+end = 61
+
+[JC_128]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 103
+begin = 17
+end = 25
+
+[JC_34]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_114]
+kind = PointerDeref
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 96
+begin = 23
+end = 31
+
+[JC_14]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 12
+begin = 11
+end = 26
+
+[JC_117]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 102
+begin = 19
+end = 61
+
+[JC_90]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/Khaliq_Aghakarimov.jc"
+line = 140
+begin = 9
+end = 1124
+
+[JC_53]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 64
+begin = 11
+end = 34
+
+[JC_21]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 47
+begin = 10
+end = 33
+
+[monotonic_safety]
+name = "Function monotonic"
+behavior = "Safety"
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 89
+begin = 4
+end = 13
+
+[JC_111]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/Khaliq_Aghakarimov.jc"
+line = 190
+begin = 9
+end = 1075
+
+[JC_77]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/Khaliq_Aghakarimov.jc"
+line = 140
+begin = 9
+end = 1124
+
+[JC_49]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 53
+begin = 17
+end = 29
+
+[JC_1]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 25
+begin = 4
+end = 8
+
+[JC_131]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 91
+begin = 22
+end = 31
+
+[JC_102]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_37]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 53
+begin = 20
+end = 29
+
+[JC_142]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/Khaliq_Aghakarimov.jc"
+line = 226
+begin = 9
+end = 1095
+
+[JC_10]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_108]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 91
+begin = 19
+end = 31
+
+[JC_57]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_89]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/Khaliq_Aghakarimov.jc"
+line = 140
+begin = 9
+end = 1124
+
+[JC_136]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 102
+begin = 19
+end = 61
+
+[JC_66]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 65
+begin = 10
+end = 76
+
+[JC_59]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 64
+begin = 11
+end = 34
+
+[doubled_ensures_default]
+name = "Function doubled"
+behavior = "default behavior"
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 51
+begin = 5
+end = 12
+
+[JC_20]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 22
+begin = 11
+end = 26
+
+[JC_18]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 18
+begin = 11
+end = 26
+
+[JC_3]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 25
+begin = 4
+end = 8
+
+[JC_92]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 85
+begin = 13
+end = 36
+
+[JC_86]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 71
+begin = 22
+end = 33
+
+[JC_60]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 64
+begin = 38
+end = 46
+
+[JC_139]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 101
+begin = 19
+end = 31
+
+[JC_72]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 71
+begin = 19
+end = 23
+
+[JC_19]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 22
+begin = 11
+end = 26
+
+[JC_119]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 101
+begin = 22
+end = 31
+
+[JC_76]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/Khaliq_Aghakarimov.jc"
+line = 140
+begin = 9
+end = 1124
+
+[JC_50]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[increasing_safety]
+name = "Function increasing"
+behavior = "Safety"
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 69
+begin = 4
+end = 14
+
+[JC_30]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[max3_safety]
+name = "Function max3"
+behavior = "Safety"
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 25
+begin = 4
+end = 8
+
+[JC_120]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 101
+begin = 19
+end = 31
+
+[JC_58]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 64
+begin = 11
+end = 34
+
+[JC_100]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_28]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/Khaliq_Aghakarimov.c"
+line = 47
+begin = 37
+end = 45
+

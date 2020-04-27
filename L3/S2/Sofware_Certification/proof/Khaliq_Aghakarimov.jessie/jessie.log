@@ -1,0 +1,316 @@
+WHYLIB is not set, using /home/xaliq/.opam/default/lib/why as default
+Parsing
+Normalization
+Typing logic labels
+Typing code
+Typing axiomatic Padding
+Typing logic type declaration padding
+Typing axiomatic Padding
+Typing tag intP
+Typing tag charP
+Typing tag voidP
+Computation of call graph
+***********************************
+Logic call graph: has 0 components
+***********************************
+******************************
+Call graph: has 4 components
+******************************
+Component 0:
+ max3 calls: 
+
+Component 1:
+ doubled calls: 
+
+Component 2:
+ increasing calls: 
+
+Component 3:
+ monotonic calls: 
+
+Adding invariants
+Computation of regions
+Separation: treating function max3
+Separation: treating function max3
+Separation: treating function doubled
+Separation: treating function doubled
+Separation: treating function increasing
+Separation: treating function increasing
+Separation: treating function monotonic
+Separation: treating function monotonic
+Computation of effects
+Effects: doing one iteration...
+Effects: doing one iteration...
+Effects: doing one iteration...
+Effects: fixpoint reached
+Effects: removing global reads w/o writes
+Effects for function max3:
+ reads:  alloc_table: 
+         tag_table: 
+         memories: 
+         raw memories: 
+         precise memories: 
+         globals: 
+         locals: __retres (Here)
+
+ writes:  alloc_table: 
+          tag_table: 
+          memories: 
+          raw memories: 
+          precise memories: 
+          globals: 
+          locals: __retres (Here)
+
+ raises: 
+Effects: doing one iteration...
+Effects: doing one iteration...
+Effects: doing one iteration...
+Effects: doing one iteration...
+Effects: fixpoint reached
+Effects: removing global reads w/o writes
+Effects for function doubled:
+ reads:  alloc_table: (alloc-root(intP),t_1) (Here)
+         tag_table: 
+         memories: (mem-field(intM),t_1) (Here)
+         raw memories: (mem-field(intM),t_1) (Here)
+         precise memories: 
+         globals: 
+         locals: i (Here)
+
+ writes:  alloc_table: 
+          tag_table: 
+          memories: (mem-field(intM),t_1) (Here)
+          raw memories: (mem-field(intM),t_1) (Here)
+          precise memories: 
+          globals: 
+          locals: i (Here)
+
+ raises: 
+Effects: doing one iteration...
+Effects: doing one iteration...
+Effects: doing one iteration...
+Effects: doing one iteration...
+Effects: fixpoint reached
+Effects: removing global reads w/o writes
+Effects for function increasing:
+ reads:  alloc_table: (alloc-root(intP),t_0_2) (Here)
+         tag_table: 
+         memories: (mem-field(intM),t_0_2) (Here)
+         raw memories: (mem-field(intM),t_0_2) (Here)
+         precise memories: 
+         globals: 
+         locals: __retres_0 (Here), i_0 (Here)
+
+ writes:  alloc_table: 
+          tag_table: 
+          memories: 
+          raw memories: 
+          precise memories: 
+          globals: 
+          locals: __retres_0 (Here), i_0 (Here)
+
+ raises: 
+Effects: doing one iteration...
+Effects: doing one iteration...
+Effects: doing one iteration...
+Effects: doing one iteration...
+Effects: fixpoint reached
+Effects: removing global reads w/o writes
+Effects for function monotonic:
+ reads:  alloc_table: (alloc-root(intP),t_1_3) (Here)
+         tag_table: 
+         memories: (mem-field(intM),t_1_3) (Here)
+         raw memories: (mem-field(intM),t_1_3) (Here)
+         precise memories: 
+         globals: 
+         locals: __retres_1 (Here), i_0_0 (Here), i_1 (Here)
+
+ writes:  alloc_table: 
+          tag_table: 
+          memories: 
+          raw memories: 
+          precise memories: 
+          globals: 
+          locals: __retres_1 (Here), i_0_0 (Here), i_1 (Here)
+
+ raises: 
+Translate logic types
+Translate structures
+all_allocs(tag charP):
+  Found 1 allocs.
+all_memories(tag charP):
+  Found 0 memories.
+all_allocs(tag charP):
+  Found 1 allocs.
+all_memories(tag charP):
+  Found 0 memories.
+all_allocs(tag charP):
+  Found 1 allocs.
+all_memories(tag charP):
+  Found 0 memories.
+all_allocs(tag charP):
+  Found 1 allocs.
+all_memories(tag charP):
+  Found 0 memories.
+all_allocs(tag charP):
+  Found 1 allocs.
+all_memories(tag charP):
+  Found 0 memories.
+all_allocs(tag charP):
+  Found 1 allocs.
+all_memories(tag charP):
+  Found 0 memories.
+all_allocs(tag charP):
+  Found 1 allocs.
+all_memories(tag charP):
+  Found 0 memories.
+all_allocs(tag charP):
+  Found 1 allocs.
+all_memories(tag charP):
+  Found 0 memories.
+all_allocs(tag intP):
+  Found 1 allocs.
+all_memories(tag intP):
+  Found 0 memories.
+all_allocs(tag intP):
+  Found 1 allocs.
+all_memories(tag intP):
+  Found 0 memories.
+all_allocs(tag intP):
+  Found 1 allocs.
+all_memories(tag intP):
+  Found 0 memories.
+all_allocs(tag intP):
+  Found 1 allocs.
+all_memories(tag intP):
+  Found 0 memories.
+all_allocs(tag intP):
+  Found 1 allocs.
+all_memories(tag intP):
+  Found 0 memories.
+all_allocs(tag intP):
+  Found 1 allocs.
+all_memories(tag intP):
+  Found 0 memories.
+all_allocs(tag intP):
+  Found 1 allocs.
+all_memories(tag intP):
+  Found 0 memories.
+all_allocs(tag intP):
+  Found 1 allocs.
+all_memories(tag intP):
+  Found 0 memories.
+all_allocs(tag voidP):
+  Found 1 allocs.
+all_memories(tag voidP):
+  Found 0 memories.
+all_allocs(tag voidP):
+  Found 1 allocs.
+all_memories(tag voidP):
+  Found 0 memories.
+all_allocs(tag voidP):
+  Found 1 allocs.
+all_memories(tag voidP):
+  Found 0 memories.
+all_allocs(tag voidP):
+  Found 1 allocs.
+all_memories(tag voidP):
+  Found 0 memories.
+all_allocs(tag voidP):
+  Found 1 allocs.
+all_memories(tag voidP):
+  Found 0 memories.
+all_allocs(tag voidP):
+  Found 1 allocs.
+all_memories(tag voidP):
+  Found 0 memories.
+all_allocs(tag voidP):
+  Found 1 allocs.
+all_memories(tag voidP):
+  Found 0 memories.
+all_allocs(tag voidP):
+  Found 1 allocs.
+all_memories(tag voidP):
+  Found 0 memories.
+Translate variants
+all_allocs(root charP):
+  Found 1 allocs.
+all_memories(root charP):
+  Found 0 memories.
+all_allocs(root charP):
+  Found 1 allocs.
+all_memories(root charP):
+  Found 0 memories.
+all_allocs(root intP):
+  Found 1 allocs.
+all_memories(root intP):
+  Found 0 memories.
+all_allocs(root intP):
+  Found 1 allocs.
+all_memories(root intP):
+  Found 0 memories.
+all_allocs(root voidP):
+  Found 1 allocs.
+all_memories(root voidP):
+  Found 0 memories.
+all_allocs(root voidP):
+  Found 1 allocs.
+all_memories(root voidP):
+  Found 0 memories.
+Translate variables
+Translate memories
+Translate allocation tables
+Translate tag tables
+Translate exceptions
+producing exception 'Goto_while_0_break'
+producing exception 'Goto_while_0_break_0'
+producing exception 'Loop_continue'
+producing exception 'Loop_exit'
+producing exception 'Return_label'
+Translate enumerated types
+Translate logic functions
+Translate axiomatic declarations
+Axiomatic Padding
+Translate lemmas
+Translate functions
+Pre-treatement Function max3
+Pre-treatement Function doubled
+Pre-treatement Function increasing
+Pre-treatement Function monotonic
+Function max3
+Jc_interp: function max3
+Jc_interp: behavior 'default' has no assigns
+Jc_interp: behavior 'default' has no assigns
+Jc_interp: behavior 'safety' has no assigns
+Jc_interp: behavior 'safety' has no assigns
+Jc_interp: behavior 'first_case' has no assigns
+Jc_interp: behavior 'first_case' has no assigns
+Jc_interp: behavior 'first1_case' has no assigns
+Jc_interp: behavior 'first1_case' has no assigns
+Jc_interp: behavior 'first2_case' has no assigns
+Jc_interp: behavior 'first2_case' has no assigns
+Jc_interp: behavior 'second_case' has no assigns
+Jc_interp: behavior 'second_case' has no assigns
+Jc_interp: behavior 'second1_case' has no assigns
+Jc_interp: behavior 'second1_case' has no assigns
+Jc_interp: behavior 'second2_case' has no assigns
+Jc_interp: behavior 'second2_case' has no assigns
+Function doubled
+Jc_interp: function doubled
+Jc_interp: behavior 'default' has no assigns
+Jc_interp: behavior 'default' has no assigns
+Jc_interp: behavior 'safety' has no assigns
+Jc_interp: behavior 'safety' has no assigns
+Function increasing
+Jc_interp: function increasing
+Jc_interp: behavior 'default' has no assigns
+Jc_interp: behavior 'default' has no assigns
+Jc_interp: behavior 'safety' has no assigns
+Jc_interp: behavior 'safety' has no assigns
+Function monotonic
+Jc_interp: function monotonic
+Jc_interp: behavior 'default' has no assigns
+Jc_interp: behavior 'default' has no assigns
+Jc_interp: behavior 'safety' has no assigns
+Jc_interp: behavior 'safety' has no assigns
+Produce Why3ml file

@@ -1,0 +1,211 @@
+[JC_31]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.jessie/double.jc"
+line = 47
+begin = 6
+end = 753
+
+[JC_17]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 8
+begin = 20
+end = 29
+
+[JC_23]
+kind = PointerDeref
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.jessie/double.jc"
+line = 59
+begin = 22
+end = 225
+
+[JC_22]
+kind = ArithOverflow
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 13
+begin = 9
+end = 12
+
+[JC_5]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_9]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 2
+begin = 10
+end = 45
+
+[JC_24]
+kind = ArithOverflow
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 12
+begin = 23
+end = 26
+
+[JC_25]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 10
+begin = 15
+end = 23
+
+[doubled_safety]
+name = "Function doubled"
+behavior = "Safety"
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 6
+begin = 5
+end = 12
+
+[JC_26]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 9
+begin = 17
+end = 58
+
+[JC_8]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 2
+begin = 37
+end = 45
+
+[JC_13]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_11]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 3
+begin = 9
+end = 55
+
+[JC_15]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 9
+begin = 17
+end = 58
+
+[JC_27]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 8
+begin = 17
+end = 21
+
+[JC_12]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 3
+begin = 9
+end = 55
+
+[JC_6]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 2
+begin = 10
+end = 33
+
+[JC_4]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 2
+begin = 10
+end = 45
+
+[JC_32]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.jessie/double.jc"
+line = 47
+begin = 6
+end = 753
+
+[JC_29]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 8
+begin = 17
+end = 29
+
+[JC_7]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 2
+begin = 10
+end = 33
+
+[JC_16]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 8
+begin = 17
+end = 21
+
+[JC_2]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 2
+begin = 10
+end = 33
+
+[JC_14]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_21]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.jessie/double.jc"
+line = 47
+begin = 6
+end = 753
+
+[JC_1]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 2
+begin = 10
+end = 33
+
+[JC_10]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[doubled_ensures_default]
+name = "Function doubled"
+behavior = "default behavior"
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 6
+begin = 5
+end = 12
+
+[JC_20]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.jessie/double.jc"
+line = 47
+begin = 6
+end = 753
+
+[JC_18]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 8
+begin = 17
+end = 29
+
+[JC_3]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 2
+begin = 37
+end = 45
+
+[JC_19]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_30]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.jessie/"
+line = 0
+begin = -1
+end = -1
+
+[JC_28]
+file = "/home/xaliq/CS/L3/S2/Certification/proof/double.c"
+line = 8
+begin = 20
+end = 29
+

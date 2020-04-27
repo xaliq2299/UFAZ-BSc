@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
+"http://why3.lri.fr/why3session.dtd">
+<why3session shape_version="4">
+<prover id="0" name="Alt-Ergo" version="1.30" timelimit="5" steplimit="0" memlimit="1000"/>
+<file name="../ex1.mlw" expanded="true">
+<theory name="Jessie_model" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+</theory>
+<theory name="Jessie_program" sum="e2fde5bfe763419196ad35233f740afc" expanded="true">
+ <goal name="WP_parameter sum_ensures_default" expl="Function sum, default behavior" expanded="true">
+ <proof prover="0"><result status="unknown" time="0.09"/></proof>
+ </goal>
+ <goal name="WP_parameter sum_safety" expl="Function sum, Safety" expanded="true">
+ <proof prover="0"><result status="unknown" time="0.07"/></proof>
+ </goal>
+</theory>
+</file>
+</why3session>

@@ -1,0 +1,201 @@
+WHYLIB is not set, using /home/xaliq/.opam/default/lib/why as default
+Parsing
+Normalization
+Typing logic labels
+Typing code
+Typing axiomatic Padding
+Typing logic type declaration padding
+Typing axiomatic Padding
+Typing tag intP
+Typing tag charP
+Typing tag voidP
+Computation of call graph
+***********************************
+Logic call graph: has 0 components
+***********************************
+******************************
+Call graph: has 1 components
+******************************
+Component 0:
+ sum calls: 
+
+Adding invariants
+Computation of regions
+Separation: treating function sum
+Separation: treating function sum
+Computation of effects
+Effects: doing one iteration...
+Effects: doing one iteration...
+Effects: doing one iteration...
+Effects: doing one iteration...
+Effects: fixpoint reached
+Effects: removing global reads w/o writes
+Effects for function sum:
+ reads:  alloc_table: (alloc-root(intP),r_3) (Here),
+                      (alloc-root(intP),s_2) (Here),
+                      (alloc-root(intP),t_1) (Here)
+         tag_table: 
+         memories: (mem-field(intM),r_3) (Here),
+                   (mem-field(intM),s_2) (Here), (mem-field(intM),t_1) (Here)
+         raw memories: (mem-field(intM),r_3) (Here),
+                       (mem-field(intM),s_2) (Here),
+                       (mem-field(intM),t_1) (Here)
+         precise memories: 
+         globals: 
+         locals: i (Here)
+
+ writes:  alloc_table: 
+          tag_table: 
+          memories: (mem-field(intM),r_3) (Here)
+          raw memories: (mem-field(intM),r_3) (Here)
+          precise memories: 
+          globals: 
+          locals: i (Here)
+
+ raises: 
+Translate logic types
+Translate structures
+all_allocs(tag charP):
+  Found 1 allocs.
+all_memories(tag charP):
+  Found 0 memories.
+all_allocs(tag charP):
+  Found 1 allocs.
+all_memories(tag charP):
+  Found 0 memories.
+all_allocs(tag charP):
+  Found 1 allocs.
+all_memories(tag charP):
+  Found 0 memories.
+all_allocs(tag charP):
+  Found 1 allocs.
+all_memories(tag charP):
+  Found 0 memories.
+all_allocs(tag charP):
+  Found 1 allocs.
+all_memories(tag charP):
+  Found 0 memories.
+all_allocs(tag charP):
+  Found 1 allocs.
+all_memories(tag charP):
+  Found 0 memories.
+all_allocs(tag charP):
+  Found 1 allocs.
+all_memories(tag charP):
+  Found 0 memories.
+all_allocs(tag charP):
+  Found 1 allocs.
+all_memories(tag charP):
+  Found 0 memories.
+all_allocs(tag intP):
+  Found 1 allocs.
+all_memories(tag intP):
+  Found 0 memories.
+all_allocs(tag intP):
+  Found 1 allocs.
+all_memories(tag intP):
+  Found 0 memories.
+all_allocs(tag intP):
+  Found 1 allocs.
+all_memories(tag intP):
+  Found 0 memories.
+all_allocs(tag intP):
+  Found 1 allocs.
+all_memories(tag intP):
+  Found 0 memories.
+all_allocs(tag intP):
+  Found 1 allocs.
+all_memories(tag intP):
+  Found 0 memories.
+all_allocs(tag intP):
+  Found 1 allocs.
+all_memories(tag intP):
+  Found 0 memories.
+all_allocs(tag intP):
+  Found 1 allocs.
+all_memories(tag intP):
+  Found 0 memories.
+all_allocs(tag intP):
+  Found 1 allocs.
+all_memories(tag intP):
+  Found 0 memories.
+all_allocs(tag voidP):
+  Found 1 allocs.
+all_memories(tag voidP):
+  Found 0 memories.
+all_allocs(tag voidP):
+  Found 1 allocs.
+all_memories(tag voidP):
+  Found 0 memories.
+all_allocs(tag voidP):
+  Found 1 allocs.
+all_memories(tag voidP):
+  Found 0 memories.
+all_allocs(tag voidP):
+  Found 1 allocs.
+all_memories(tag voidP):
+  Found 0 memories.
+all_allocs(tag voidP):
+  Found 1 allocs.
+all_memories(tag voidP):
+  Found 0 memories.
+all_allocs(tag voidP):
+  Found 1 allocs.
+all_memories(tag voidP):
+  Found 0 memories.
+all_allocs(tag voidP):
+  Found 1 allocs.
+all_memories(tag voidP):
+  Found 0 memories.
+all_allocs(tag voidP):
+  Found 1 allocs.
+all_memories(tag voidP):
+  Found 0 memories.
+Translate variants
+all_allocs(root charP):
+  Found 1 allocs.
+all_memories(root charP):
+  Found 0 memories.
+all_allocs(root charP):
+  Found 1 allocs.
+all_memories(root charP):
+  Found 0 memories.
+all_allocs(root intP):
+  Found 1 allocs.
+all_memories(root intP):
+  Found 0 memories.
+all_allocs(root intP):
+  Found 1 allocs.
+all_memories(root intP):
+  Found 0 memories.
+all_allocs(root voidP):
+  Found 1 allocs.
+all_memories(root voidP):
+  Found 0 memories.
+all_allocs(root voidP):
+  Found 1 allocs.
+all_memories(root voidP):
+  Found 0 memories.
+Translate variables
+Translate memories
+Translate allocation tables
+Translate tag tables
+Translate exceptions
+producing exception 'Goto_while_0_break'
+producing exception 'Loop_continue'
+producing exception 'Loop_exit'
+producing exception 'Return_label'
+Translate enumerated types
+Translate logic functions
+Translate axiomatic declarations
+Axiomatic Padding
+Translate lemmas
+Translate functions
+Pre-treatement Function sum
+Function sum
+Jc_interp: function sum
+Jc_interp: behavior 'default' has no assigns
+Jc_interp: behavior 'default' has no assigns
+Jc_interp: behavior 'safety' has no assigns
+Jc_interp: behavior 'safety' has no assigns
+Produce Why3ml file

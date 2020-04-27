@@ -1,0 +1,52 @@
+# IntModel = bounded
+# InvariantPolicy = Arguments
+# SeparationPolicy = Regions
+# AnnotationPolicy = None
+# AbstractDomain = Pol
+
+axiomatic Padding {
+
+  logic type padding
+  
+}
+
+type int8 = -128..127
+
+type int32 = -2147483648..2147483647
+
+tag charP = {
+  int8 charM: 8;
+}
+
+type charP = [charP]
+
+tag voidP = {
+}
+
+type voidP = [voidP]
+
+int32 min(int32 a, int32 b)
+behavior a_less:
+  assumes (a < b);
+  ensures (_C_3 : (\result == \at(a,Old)));
+behavior b_less:
+  assumes (a >= b);
+  ensures (_C_4 : (\result == \at(b,Old)));
+behavior default:
+  ensures (_C_5 : true);
+{  
+   (var int32 __retres);
+   
+   {  (if (a < b) then 
+      {  (_C_2 : (__retres = a));
+         
+         (goto return_label)
+      } else 
+      {  (_C_1 : (__retres = b));
+         
+         (goto return_label)
+      });
+      (return_label : 
+      (return __retres))
+   }
+}

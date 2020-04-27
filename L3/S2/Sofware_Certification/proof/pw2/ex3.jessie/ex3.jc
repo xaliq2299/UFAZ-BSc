@@ -1,0 +1,64 @@
+# IntModel = bounded
+# InvariantPolicy = Arguments
+# SeparationPolicy = Regions
+# AnnotationPolicy = None
+# AbstractDomain = Pol
+
+axiomatic Padding {
+
+  logic type padding
+  
+}
+
+type int8 = -128..127
+
+type int32 = -2147483648..2147483647
+
+tag charP = {
+  int8 charM: 8;
+}
+
+type charP = [charP]
+
+tag voidP = {
+}
+
+type voidP = [voidP]
+
+int32 mul(int32 x, int32 y)
+  requires (_C_19 : ((((_C_22 : (0 < x)) && (_C_23 : (x <= 100))) &&
+                       (_C_24 : (0 < y))) &&
+                      (_C_25 : (y <= 100))));
+behavior default:
+  ensures (_C_14 : ((_C_15 : (\result == (\at(x,Old) * \at(y,Old)))) &&
+                     ((_C_17 : (0 < \result)) &&
+                       (_C_18 : (\result <= 10000)))));
+{  
+   (var int32 mul_0);
+   
+   (var int32 i);
+   
+   {  (_C_1 : (mul_0 = 0));
+      
+      {  (_C_2 : (i = 0));
+         
+         loop 
+         behavior default:
+           invariant (_C_5 : ((_C_6 : (0 <= i)) && (_C_7 : (i <= y))));
+         behavior default:
+           invariant (_C_4 : (mul_0 == (x * i)));
+         variant (_C_3 : (y - i));
+         while (true)
+         {  
+            {  (if (i < y) then () else 
+               (goto while_0_break));
+               (_C_10 : (mul_0 = (_C_9 : ((_C_8 : (mul_0 + x)) :> int32))));
+               (_C_13 : (i = (_C_12 : ((_C_11 : (i + 1)) :> int32))))
+            }
+         };
+         (while_0_break : ())
+      };
+      
+      (return mul_0)
+   }
+}

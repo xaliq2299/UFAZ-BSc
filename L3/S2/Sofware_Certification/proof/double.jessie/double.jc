@@ -1,0 +1,69 @@
+# IntModel = bounded
+# InvariantPolicy = Arguments
+# SeparationPolicy = Regions
+# AnnotationPolicy = None
+# AbstractDomain = Pol
+
+axiomatic Padding {
+
+  logic type padding
+  
+}
+
+type int8 = -128..127
+
+type int32 = -2147483648..2147483647
+
+tag intP = {
+  int32 intM: 32;
+}
+
+type intP = [intP]
+
+tag charP = {
+  int8 charM: 8;
+}
+
+type charP = [charP]
+
+tag voidP = {
+}
+
+type voidP = [voidP]
+
+unit doubled(intP[..] t, int32 taille)
+  requires (_C_16 : (((_C_18 : (\offset_min(t) <= 0)) &&
+                       (_C_19 : (\offset_max(t) >= (taille - 1)))) &&
+                      (_C_20 : (taille > 0))));
+behavior default:
+  ensures (_C_15 : (\forall integer i;
+                     (((0 <= i) && (i < \at(taille,Old))) ==>
+                       ((\at(t,Old) + i).intM == (2 * i)))));
+{  
+   (var int32 i);
+   
+   {  (_C_1 : (i = 0));
+      
+      loop 
+      behavior default:
+        invariant (_C_4 : ((_C_5 : (0 <= i)) && (_C_6 : (i <= taille))));
+      behavior default:
+        invariant (_C_3 : (\forall integer j;
+                            (((0 <= j) && (j < i)) ==>
+                              ((t + j).intM == (2 * j)))));
+      variant (_C_2 : (taille - i));
+      while (true)
+      {  
+         {  (if (i < taille) then () else 
+            (goto while_0_break));
+            (_C_11 : ((_C_10 : (_C_9 : (t + i)).intM) = (_C_8 : ((_C_7 : 
+                                                                 (2 *
+                                                                   i)) :> int32))));
+            (_C_14 : (i = (_C_13 : ((_C_12 : (i + 1)) :> int32))))
+         }
+      };
+      (while_0_break : ());
+      
+      (return ())
+   }
+}

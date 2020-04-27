@@ -1,0 +1,569 @@
+theory Jessie_model
+
+use import int.Int
+
+use bool.Bool
+
+use import jessie_why3theories.Jessie_memory_model
+
+type charP
+
+type int32
+
+type int8
+
+type intP
+
+type padding
+
+type voidP
+
+function charP_tag  : (tag_id charP)
+
+axiom charP_int "charP_int": ((int_of_tag charP_tag) = (1))
+
+function charP_of_pointer_address (pointer ()) : (pointer charP)
+
+axiom charP_of_pointer_address_of_pointer_addr "charP_of_pointer_address_of_pointer_addr":
+ (forall p:(pointer charP).
+  (p = (charP_of_pointer_address (pointer_address p))))
+
+axiom charP_parenttag_bottom "charP_parenttag_bottom":
+ (parenttag charP_tag bottom_tag)
+
+axiom charP_tags "charP_tags":
+ (forall x:(pointer charP).
+  (forall charP_tag_table:(tag_table charP).
+   (instanceof charP_tag_table x charP_tag)))
+
+function integer_of_int32 int32 : int
+
+predicate eq_int32(x:int32) (y:int32) =
+ ((integer_of_int32 x) = (integer_of_int32 y))
+
+function integer_of_int8 int8 : int
+
+predicate eq_int8(x:int8) (y:int8) =
+ ((integer_of_int8 x) = (integer_of_int8 y))
+
+function int32_of_integer int : int32
+
+axiom int32_coerce "int32_coerce":
+ (forall x:int.
+  (((Int.(<=) (-2147483648) x) /\ (Int.(<=) x (2147483647))) ->
+   ((integer_of_int32 (int32_of_integer x)) = x)))
+
+axiom int32_extensionality "int32_extensionality":
+ (forall x:int32.
+  (forall y:int32[((integer_of_int32 x) = (integer_of_int32 y))].
+   (((integer_of_int32 x) = (integer_of_int32 y)) -> (x = y))))
+
+axiom int32_range "int32_range":
+ (forall x:int32.
+  ((Int.(<=) (-2147483648) (integer_of_int32 x))
+  /\ (Int.(<=) (integer_of_int32 x) (2147483647))))
+
+function int8_of_integer int : int8
+
+axiom int8_coerce "int8_coerce":
+ (forall x:int.
+  (((Int.(<=) (-128) x) /\ (Int.(<=) x (127))) ->
+   ((integer_of_int8 (int8_of_integer x)) = x)))
+
+axiom int8_extensionality "int8_extensionality":
+ (forall x:int8.
+  (forall y:int8[((integer_of_int8 x) = (integer_of_int8 y))].
+   (((integer_of_int8 x) = (integer_of_int8 y)) -> (x = y))))
+
+axiom int8_range "int8_range":
+ (forall x:int8.
+  ((Int.(<=) (-128) (integer_of_int8 x))
+  /\ (Int.(<=) (integer_of_int8 x) (127))))
+
+function intP_tag  : (tag_id intP)
+
+axiom intP_int "intP_int": ((int_of_tag intP_tag) = (1))
+
+function intP_of_pointer_address (pointer ()) : (pointer intP)
+
+axiom intP_of_pointer_address_of_pointer_addr "intP_of_pointer_address_of_pointer_addr":
+ (forall p:(pointer intP).
+  (p = (intP_of_pointer_address (pointer_address p))))
+
+axiom intP_parenttag_bottom "intP_parenttag_bottom":
+ (parenttag intP_tag bottom_tag)
+
+axiom intP_tags "intP_tags":
+ (forall x:(pointer intP).
+  (forall intP_tag_table:(tag_table intP).
+   (instanceof intP_tag_table x intP_tag)))
+
+predicate left_valid_struct_charP(p:(pointer charP)) (a:int) (charP_alloc_table:(alloc_table charP)) =
+ ((offset_min charP_alloc_table p) <= a)
+
+predicate left_valid_struct_intP(p:(pointer intP)) (a:int) (intP_alloc_table:(alloc_table intP)) =
+ ((offset_min intP_alloc_table p) <= a)
+
+predicate left_valid_struct_voidP(p:(pointer voidP)) (a:int) (voidP_alloc_table:(alloc_table voidP)) =
+ ((offset_min voidP_alloc_table p) <= a)
+
+axiom pointer_addr_of_charP_of_pointer_address "pointer_addr_of_charP_of_pointer_address":
+ (forall p:(pointer ()).
+  (p = (pointer_address (charP_of_pointer_address p))))
+
+axiom pointer_addr_of_intP_of_pointer_address "pointer_addr_of_intP_of_pointer_address":
+ (forall p:(pointer ()). (p = (pointer_address (intP_of_pointer_address p))))
+
+function voidP_of_pointer_address (pointer ()) : (pointer voidP)
+
+axiom pointer_addr_of_voidP_of_pointer_address "pointer_addr_of_voidP_of_pointer_address":
+ (forall p:(pointer ()).
+  (p = (pointer_address (voidP_of_pointer_address p))))
+
+predicate right_valid_struct_charP(p:(pointer charP)) (b:int) (charP_alloc_table:(alloc_table charP)) =
+ ((offset_max charP_alloc_table p) >= b)
+
+predicate right_valid_struct_intP(p:(pointer intP)) (b:int) (intP_alloc_table:(alloc_table intP)) =
+ ((offset_max intP_alloc_table p) >= b)
+
+predicate right_valid_struct_voidP(p:(pointer voidP)) (b:int) (voidP_alloc_table:(alloc_table voidP)) =
+ ((offset_max voidP_alloc_table p) >= b)
+
+predicate strict_valid_root_charP(p:(pointer charP)) (a:int) (b:int) (charP_alloc_table:(alloc_table charP)) =
+ (((offset_min charP_alloc_table p) = a)
+ /\ ((offset_max charP_alloc_table p) = b))
+
+predicate strict_valid_root_intP(p:(pointer intP)) (a:int) (b:int) (intP_alloc_table:(alloc_table intP)) =
+ (((offset_min intP_alloc_table p) = a)
+ /\ ((offset_max intP_alloc_table p) = b))
+
+predicate strict_valid_root_voidP(p:(pointer voidP)) (a:int) (b:int) (voidP_alloc_table:(alloc_table voidP)) =
+ (((offset_min voidP_alloc_table p) = a)
+ /\ ((offset_max voidP_alloc_table p) = b))
+
+predicate strict_valid_struct_charP(p:(pointer charP)) (a:int) (b:int) (charP_alloc_table:(alloc_table charP)) =
+ (((offset_min charP_alloc_table p) = a)
+ /\ ((offset_max charP_alloc_table p) = b))
+
+predicate strict_valid_struct_intP(p:(pointer intP)) (a:int) (b:int) (intP_alloc_table:(alloc_table intP)) =
+ (((offset_min intP_alloc_table p) = a)
+ /\ ((offset_max intP_alloc_table p) = b))
+
+predicate strict_valid_struct_voidP(p:(pointer voidP)) (a:int) (b:int) (voidP_alloc_table:(alloc_table voidP)) =
+ (((offset_min voidP_alloc_table p) = a)
+ /\ ((offset_max voidP_alloc_table p) = b))
+
+predicate valid_root_charP(p:(pointer charP)) (a:int) (b:int) (charP_alloc_table:(alloc_table charP)) =
+ (((offset_min charP_alloc_table p) <= a)
+ /\ ((offset_max charP_alloc_table p) >= b))
+
+predicate valid_root_intP(p:(pointer intP)) (a:int) (b:int) (intP_alloc_table:(alloc_table intP)) =
+ (((offset_min intP_alloc_table p) <= a)
+ /\ ((offset_max intP_alloc_table p) >= b))
+
+predicate valid_root_voidP(p:(pointer voidP)) (a:int) (b:int) (voidP_alloc_table:(alloc_table voidP)) =
+ (((offset_min voidP_alloc_table p) <= a)
+ /\ ((offset_max voidP_alloc_table p) >= b))
+
+predicate valid_struct_charP(p:(pointer charP)) (a:int) (b:int) (charP_alloc_table:(alloc_table charP)) =
+ (((offset_min charP_alloc_table p) <= a)
+ /\ ((offset_max charP_alloc_table p) >= b))
+
+predicate valid_struct_intP(p:(pointer intP)) (a:int) (b:int) (intP_alloc_table:(alloc_table intP)) =
+ (((offset_min intP_alloc_table p) <= a)
+ /\ ((offset_max intP_alloc_table p) >= b))
+
+predicate valid_struct_voidP(p:(pointer voidP)) (a:int) (b:int) (voidP_alloc_table:(alloc_table voidP)) =
+ (((offset_min voidP_alloc_table p) <= a)
+ /\ ((offset_max voidP_alloc_table p) >= b))
+
+function voidP_tag  : (tag_id voidP)
+
+axiom voidP_int "voidP_int": ((int_of_tag voidP_tag) = (1))
+
+axiom voidP_of_pointer_address_of_pointer_addr "voidP_of_pointer_address_of_pointer_addr":
+ (forall p:(pointer voidP).
+  (p = (voidP_of_pointer_address (pointer_address p))))
+
+axiom voidP_parenttag_bottom "voidP_parenttag_bottom":
+ (parenttag voidP_tag bottom_tag)
+
+axiom voidP_tags "voidP_tags":
+ (forall x:(pointer voidP).
+  (forall voidP_tag_table:(tag_table voidP).
+   (instanceof voidP_tag_table x voidP_tag)))
+
+end
+
+module Jessie_program
+
+use import int.Int
+
+use bool.Bool
+
+use import jessie_why3theories.Jessie_memory_model
+
+use import Jessie_model
+
+use import ref.Ref
+
+use import jessie_why3.JessieDivision
+
+use import jessie_why3.Jessie_memory_model_parameters
+
+exception Goto_while_0_break_exc ()
+
+exception Loop_continue_exc ()
+
+exception Loop_exit_exc ()
+
+exception Return_label_exc ()
+
+val charP_alloc_table : ref (alloc_table charP)
+
+val charP_tag_table : ref (tag_table charP)
+
+val alloc_struct_charP
+ (n:int)
+  (charP_alloc_table:ref (alloc_table charP))
+   (charP_tag_table:ref (tag_table charP)) : (pointer charP)
+    requires { true } writes { charP_alloc_table, charP_tag_table }
+     ensures { ((strict_valid_struct_charP result (0) (Int.(-) n (1))
+                !charP_alloc_table)
+               /\ ((alloc_extends (old !charP_alloc_table)
+                   !charP_alloc_table)
+                  /\ ((alloc_fresh (old !charP_alloc_table) result n)
+                     /\ (instanceof !charP_tag_table result charP_tag)))) }
+
+val alloc_struct_charP_requires
+ (n:int)
+  (charP_alloc_table:ref (alloc_table charP))
+   (charP_tag_table:ref (tag_table charP)) : (pointer charP)
+    requires { (Int.(>=) n (0)) } writes { charP_alloc_table,
+    charP_tag_table }
+     ensures { ((strict_valid_struct_charP result (0) (Int.(-) n (1))
+                !charP_alloc_table)
+               /\ ((alloc_extends (old !charP_alloc_table)
+                   !charP_alloc_table)
+                  /\ ((alloc_fresh (old !charP_alloc_table) result n)
+                     /\ (instanceof !charP_tag_table result charP_tag)))) }
+
+val intP_alloc_table : ref (alloc_table intP)
+
+val intP_tag_table : ref (tag_table intP)
+
+val alloc_struct_intP
+ (n:int)
+  (intP_alloc_table:ref (alloc_table intP))
+   (intP_tag_table:ref (tag_table intP)) : (pointer intP)
+    requires { true } writes { intP_alloc_table, intP_tag_table }
+     ensures { ((strict_valid_struct_intP result (0) (Int.(-) n (1))
+                !intP_alloc_table)
+               /\ ((alloc_extends (old !intP_alloc_table) !intP_alloc_table)
+                  /\ ((alloc_fresh (old !intP_alloc_table) result n)
+                     /\ (instanceof !intP_tag_table result intP_tag)))) }
+
+val alloc_struct_intP_requires
+ (n:int)
+  (intP_alloc_table:ref (alloc_table intP))
+   (intP_tag_table:ref (tag_table intP)) : (pointer intP)
+    requires { (Int.(>=) n (0)) } writes { intP_alloc_table, intP_tag_table }
+     ensures { ((strict_valid_struct_intP result (0) (Int.(-) n (1))
+                !intP_alloc_table)
+               /\ ((alloc_extends (old !intP_alloc_table) !intP_alloc_table)
+                  /\ ((alloc_fresh (old !intP_alloc_table) result n)
+                     /\ (instanceof !intP_tag_table result intP_tag)))) }
+
+val voidP_alloc_table : ref (alloc_table voidP)
+
+val voidP_tag_table : ref (tag_table voidP)
+
+val alloc_struct_voidP
+ (n:int)
+  (voidP_alloc_table:ref (alloc_table voidP))
+   (voidP_tag_table:ref (tag_table voidP)) : (pointer voidP)
+    requires { true } writes { voidP_alloc_table, voidP_tag_table }
+     ensures { ((strict_valid_struct_voidP result (0) (Int.(-) n (1))
+                !voidP_alloc_table)
+               /\ ((alloc_extends (old !voidP_alloc_table)
+                   !voidP_alloc_table)
+                  /\ ((alloc_fresh (old !voidP_alloc_table) result n)
+                     /\ (instanceof !voidP_tag_table result voidP_tag)))) }
+
+val alloc_struct_voidP_requires
+ (n:int)
+  (voidP_alloc_table:ref (alloc_table voidP))
+   (voidP_tag_table:ref (tag_table voidP)) : (pointer voidP)
+    requires { (Int.(>=) n (0)) } writes { voidP_alloc_table,
+    voidP_tag_table }
+     ensures { ((strict_valid_struct_voidP result (0) (Int.(-) n (1))
+                !voidP_alloc_table)
+               /\ ((alloc_extends (old !voidP_alloc_table)
+                   !voidP_alloc_table)
+                  /\ ((alloc_fresh (old !voidP_alloc_table) result n)
+                     /\ (instanceof !voidP_tag_table result voidP_tag)))) }
+
+val any_int32 (_anonymous:()) : int32 requires { true }  ensures { true }
+
+val any_int8 (_anonymous:()) : int8 requires { true }  ensures { true }
+
+val int32_of_integer_
+ (x:int) : int32
+  requires { ((Int.(<=) (-2147483648) x) /\ (Int.(<=) x (2147483647))) }
+   ensures { ((integer_of_int32 result) = x) }
+
+val int8_of_integer_
+ (x:int) : int8
+  requires { ((Int.(<=) (-128) x) /\ (Int.(<=) x (127))) }
+   ensures { ((integer_of_int8 result) = x) }
+
+val isIncreasing
+ (a:(pointer intP))
+  (n:int32)
+   (intP_a_1_alloc_table:(alloc_table intP))
+    (intP_intM_a_1:(memory intP int32)) : int32
+     requires { true }
+      ensures { (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/" 0 0 0#
+                ((#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 3 10 71#
+                 ((forall i:int.
+                   (((Int.(<=) (0) i)
+                    /\ (Int.(<) i (Int.(-) (integer_of_int32 n) (1)))) ->
+                    (Int.(<=)
+                    (integer_of_int32 (select intP_intM_a_1 (shift a i)))
+                    (integer_of_int32
+                    (select intP_intM_a_1 (shift a (Int.(+) i (1)))))))) ->
+                  ((integer_of_int32 result) = (1))))
+                /\ (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 4 10 69#
+                   ((exists i_0:int.
+                     ((Int.(<=) (0) i_0)
+                     /\ ((Int.(<) i_0 (Int.(-) (integer_of_int32 n) (1)))
+                        /\ (Int.(>)
+                           (integer_of_int32
+                           (select intP_intM_a_1 (shift a i_0)))
+                           (integer_of_int32
+                           (select intP_intM_a_1 (shift a (Int.(+) i_0 (1))))))))) ->
+                    ((integer_of_int32 result) = (0)))))) }
+
+val isIncreasing_requires
+ (a:(pointer intP))
+  (n:int32)
+   (intP_a_1_alloc_table:(alloc_table intP))
+    (intP_intM_a_1:(memory intP int32)) : int32
+     requires { (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 2 11 36#
+                ((#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 2 11 29#
+                 (Int.(<=) (offset_min intP_a_1_alloc_table a) (0)))
+                /\ ((#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 2 11 29#
+                    (Int.(>=) (offset_max intP_a_1_alloc_table a)
+                    (Int.(-) (integer_of_int32 n) (1))))
+                   /\ (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 2 33 36#
+                      (Int.(>) (integer_of_int32 n) (0)))))) }
+      ensures { (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/" 0 0 0#
+                ((#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 3 10 71#
+                 ((forall i:int.
+                   (((Int.(<=) (0) i)
+                    /\ (Int.(<) i (Int.(-) (integer_of_int32 n) (1)))) ->
+                    (Int.(<=)
+                    (integer_of_int32 (select intP_intM_a_1 (shift a i)))
+                    (integer_of_int32
+                    (select intP_intM_a_1 (shift a (Int.(+) i (1)))))))) ->
+                  ((integer_of_int32 result) = (1))))
+                /\ (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 4 10 69#
+                   ((exists i_0:int.
+                     ((Int.(<=) (0) i_0)
+                     /\ ((Int.(<) i_0 (Int.(-) (integer_of_int32 n) (1)))
+                        /\ (Int.(>)
+                           (integer_of_int32
+                           (select intP_intM_a_1 (shift a i_0)))
+                           (integer_of_int32
+                           (select intP_intM_a_1 (shift a (Int.(+) i_0 (1))))))))) ->
+                    ((integer_of_int32 result) = (0)))))) }
+
+val safe_int32_of_integer_
+ (x:int) : int32
+  requires { true }  ensures { ((integer_of_int32 result) = x) }
+
+val safe_int8_of_integer_
+ (x:int) : int8 requires { true }  ensures { ((integer_of_int8 result) = x) }
+
+let isIncreasing_ensures_default "W:diverges:N" "expl:Function isIncreasing, default behavior"
+ #"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 7 4 16#=
+ fun (a : (pointer intP)) (n : int32) (intP_a_1_alloc_table : (alloc_table intP)) (intP_intM_a_1 : (memory intP int32)) ->
+  requires { (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 2 11 36#
+             ((#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 2 11 29#
+              (Int.(<=) (offset_min intP_a_1_alloc_table a) (0)))
+             /\ ((#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 2 11 29#
+                 (Int.(>=) (offset_max intP_a_1_alloc_table a)
+                 (Int.(-) (integer_of_int32 n) (1))))
+                /\ (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 2 33 36#
+                   (Int.(>) (integer_of_int32 n) (0))))))  }
+  ensures { (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/" 0 0 0#
+            ((#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 3 10 71#
+             ((forall i:int.
+               (((Int.(<=) (0) i)
+                /\ (Int.(<) i (Int.(-) (integer_of_int32 n) (1)))) ->
+                (Int.(<=)
+                (integer_of_int32 (select intP_intM_a_1 (shift a i)))
+                (integer_of_int32
+                (select intP_intM_a_1 (shift a (Int.(+) i (1)))))))) ->
+              ((integer_of_int32 result) = (1))))
+            /\ (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 4 10 69#
+               ((exists i_0:int.
+                 ((Int.(<=) (0) i_0)
+                 /\ ((Int.(<) i_0 (Int.(-) (integer_of_int32 n) (1)))
+                    /\ (Int.(>)
+                       (integer_of_int32
+                       (select intP_intM_a_1 (shift a i_0)))
+                       (integer_of_int32
+                       (select intP_intM_a_1 (shift a (Int.(+) i_0 (1))))))))) ->
+                ((integer_of_int32 result) = (0)))))) } 
+  ('Init: 
+  (let return = ref (any_int32 ()) in
+  try
+   begin
+     (let i_1 = ref (any_int32 ()) in
+     (let __retres = ref (any_int32 ()) in
+     try
+      begin
+        try
+         begin
+           (let _jessie_15 = (i_1 := (safe_int32_of_integer_ (0))) in ());
+          ('Loop_2: 
+          begin
+            loop
+            invariant
+              { ((#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 10 19 61#
+                 (forall j:int.
+                  (((Int.(<=) (0) j) /\ (Int.(<) j (integer_of_int32 !i_1))) ->
+                   (Int.(<=)
+                   (integer_of_int32 (select intP_intM_a_1 (shift a j)))
+                   (integer_of_int32
+                   (select intP_intM_a_1 (shift a (Int.(+) j (1)))))))))
+                /\ (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 9 19 28#
+                   ((#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 9 19 23#
+                    (Int.(<=) (0) (integer_of_int32 !i_1)))
+                   /\ (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 9 22 28#
+                      (Int.(<=) (integer_of_int32 !i_1)
+                      (Int.(-) (integer_of_int32 n) (1))))))) } 
+             begin
+               any () requires { true }  ensures { true } ;
+              try
+               begin
+                 (let _jessie_19 =
+                 begin
+                   (if (Int.(<) (integer_of_int32 !i_1) (integer_of_int32 
+                                                         (safe_int32_of_integer_ 
+                                                          (Int.(-) (integer_of_int32 n) (1)))))
+                   then () else (raise (Goto_while_0_break_exc ())));
+                  (if (Int.(>) (integer_of_int32 (safe_acc_ intP_intM_a_1 
+                                                  (shift a (integer_of_int32 !i_1)))) 
+                       (integer_of_int32 (safe_acc_ intP_intM_a_1 (shift a 
+                                                                   (integer_of_int32 
+                                                                    (safe_int32_of_integer_ 
+                                                                    (Int.(+) 
+                                                                    (integer_of_int32 !i_1) (1))))))))
+                  then
+                   begin
+                     (let _jessie_17 =
+                     (__retres := (safe_int32_of_integer_ (0))) in ());
+                    (raise (Return_label_exc ())) end else ());
+                  (i_1 := (safe_int32_of_integer_ (Int.(+) (integer_of_int32 !i_1) (1))));
+                  !i_1 end in ()); (raise (Loop_continue_exc ())) end with
+               Loop_continue_exc _jessie_4 -> () end end end;
+           (raise (Goto_while_0_break_exc ())) end) end with
+         Goto_while_0_break_exc _jessie_1 -> ('While_0_break:  ()) end;
+       (let _jessie_21 = (__retres := (safe_int32_of_integer_ (1))) in ());
+       (raise (Return_label_exc ())) end with Return_label_exc _jessie_2 ->
+      ('Return_label:  begin   (return := !__retres); (raise Return) end) end));
+    absurd  end with Return -> !return end)) 
+
+let isIncreasing_safety "expl:Function isIncreasing, Safety"
+ #"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 7 4 16#=
+ fun (a : (pointer intP)) (n : int32) (intP_a_1_alloc_table : (alloc_table intP)) (intP_intM_a_1 : (memory intP int32)) ->
+  requires { (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 2 11 36#
+             ((#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 2 11 29#
+              (Int.(<=) (offset_min intP_a_1_alloc_table a) (0)))
+             /\ ((#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 2 11 29#
+                 (Int.(>=) (offset_max intP_a_1_alloc_table a)
+                 (Int.(-) (integer_of_int32 n) (1))))
+                /\ (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 2 33 36#
+                   (Int.(>) (integer_of_int32 n) (0))))))  } ensures { true } 
+  ('Init: 
+  (let return = ref (any_int32 ()) in
+  try
+   begin
+     (let i_1 = ref (any_int32 ()) in
+     (let __retres = ref (any_int32 ()) in
+     try
+      begin
+        try
+         begin
+           (let _jessie_6 = (i_1 := (safe_int32_of_integer_ (0))) in ());
+          ('Loop_1: 
+          begin
+            loop
+            invariant
+              { (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.jessie/ex5.jc" 57 9 987#
+                true) }
+              variant { (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 11 17 22# 
+                (Int.(-)
+                (Int.(-) (integer_of_int32 n) (integer_of_int32 !i_1)) (1))) }
+             begin
+               any ()
+               requires { true } reads { i_1 } 
+                ensures { ((#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 10 19 61#
+                           (forall j:int.
+                            (((Int.(<=) (0) j)
+                             /\ (Int.(<) j (integer_of_int32 !i_1))) ->
+                             (Int.(<=)
+                             (integer_of_int32
+                             (select intP_intM_a_1 (shift a j)))
+                             (integer_of_int32
+                             (select intP_intM_a_1 (shift a (Int.(+) j (1)))))))))
+                          /\ (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 9 19 28#
+                             ((#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 9 19 23#
+                              (Int.(<=) (0) (integer_of_int32 !i_1)))
+                             /\ (#"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 9 22 28#
+                                (Int.(<=) (integer_of_int32 !i_1)
+                                (Int.(-) (integer_of_int32 n) (1))))))) } ;
+              try
+               begin
+                 (let _jessie_10 =
+                 begin
+                   (if (Int.(<) (integer_of_int32 !i_1) (integer_of_int32 
+                                                         ("expl:arithmetic overflow"
+                                                         #"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 13 16 19#
+                                                         (int32_of_integer_ 
+                                                          (Int.(-) (integer_of_int32 n) (1))))))
+                   then () else (raise (Goto_while_0_break_exc ())));
+                  (if (Int.(>) (integer_of_int32 ("expl:pointer dereference"
+                                                 #"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 14 7 11#
+                                                 (offset_acc_ intP_a_1_alloc_table intP_intM_a_1 a 
+                                                  (integer_of_int32 !i_1)))) 
+                       (integer_of_int32 ("expl:pointer dereference"
+                                         #"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 14 12 18#
+                                         (offset_acc_ intP_a_1_alloc_table intP_intM_a_1 a 
+                                          (integer_of_int32 ("expl:arithmetic overflow"
+                                                            #"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 14 14 17#
+                                                            (int32_of_integer_ 
+                                                             (Int.(+) 
+                                                               (integer_of_int32 !i_1) (1)))))))))
+                  then
+                   begin
+                     (let _jessie_8 =
+                     (__retres := (safe_int32_of_integer_ (0))) in ());
+                    (raise (Return_label_exc ())) end else ());
+                  (i_1 := ("expl:arithmetic overflow"
+                          #"/home/xaliq/CS/L3/S2/Certification/proof/pw2/ex5.c" 13 20 23#
+                          (int32_of_integer_ (Int.(+) (integer_of_int32 !i_1) (1)))));
+                  !i_1 end in ()); (raise (Loop_continue_exc ())) end with
+               Loop_continue_exc _jessie_4 -> () end end end;
+           (raise (Goto_while_0_break_exc ())) end) end with
+         Goto_while_0_break_exc _jessie_1 -> ('While_0_break:  ()) end;
+       (let _jessie_12 = (__retres := (safe_int32_of_integer_ (1))) in ());
+       (raise (Return_label_exc ())) end with Return_label_exc _jessie_2 ->
+      ('Return_label:  begin   (return := !__retres); (raise Return) end) end));
+    absurd  end with Return -> !return end)) 
+
+end
+
+
