@@ -1,9 +1,0 @@
-#!/bin/bash
-read -p "enter age:" age
-if [ $age -lt 12 ]; then
-echo "child rate 3.00"
-elif [ $age -gt 60 ]; then
-echo "senior rate 7.00"
-else
-echo "adult rate 10.00"
-fi

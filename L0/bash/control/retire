@@ -1,8 +1,0 @@
-#!/bin/bash
-read -p "Enter Years of Work:" Years
-if [ $Years -lt 20 ]; then
-echo "you can retire now."
-else
-echo "you need 20+ retire"
-fi
-

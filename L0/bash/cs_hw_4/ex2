@@ -1,8 +1,0 @@
-#!/bin/bash
-read -p "Name of the file:" file
-if [[ -r $file && -w $file && -x $file ]]; then
-echo "it is accessible"
-else
-echo "it is not accessible"
-fi
-

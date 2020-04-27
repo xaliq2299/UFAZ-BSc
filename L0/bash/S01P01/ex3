@@ -1,8 +1,0 @@
-#!/bin/bash
-echo "enter the sides of triangle"
-read a b c
-if [[ $(($a-$b)) -gt $c && $(($a-$c)) -gt $b && $(($b-$c)) -gt $a ]]; then
-echo "this triangle is valid"
-else
-echo "this triangle is invalid"
-fi

@@ -1,9 +1,0 @@
-#!/bin/bash
-echo "write the name of the subject plz"
-read name
-if [ -d $name ];
-then 
-     echo "this is directory"
-else
-     echo "this is a file"
-fi

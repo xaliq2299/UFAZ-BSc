@@ -1,8 +1,0 @@
-#!/bin/bash
-read -p "the name of the file:" file
-if [ -r $file ]; then
-   echo "it is readable"
-else
-   echo "not readable"
-fi
-

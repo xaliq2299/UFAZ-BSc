@@ -1,8 +1,0 @@
-#!/bin/csh -xv
-set files = *
-foreach file ($files) #for loop to work with name of each file
-	echo $file #to print what is the file
-	if ($file:e == jpg) then #condition only for jpg files
-	   mv $file {$file:r}.png #changing the name exention
-	endif
-end

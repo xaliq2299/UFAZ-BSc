@@ -1,8 +1,0 @@
-#!/bin/bash
-echo "dear student enter your grade"
-read a
-if [ $a -gt 12 ]; then
-echo "Dear student, you have grade more than class average, $a"
-else
-echo "Dear student, you have grade under the class average, $a"
-fi

@@ -1,6 +1,0 @@
-#!/bin/bash
-read -p "dear student, enter the grades of exam P01 and P02 respectively:" a b
-let c=$a+$b
-let d=$c/2
-let FS1=20-$d
-echo "you must have $FS1 minimum in Exam FS1 to arrive average 10"
