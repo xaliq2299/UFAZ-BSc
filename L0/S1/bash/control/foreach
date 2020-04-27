@@ -1,0 +1,5 @@
+#!/bin/csh
+foreach x (*)
+	echo "Changing mode for $x"
+	chmod +rx $x
+end

@@ -1,0 +1,17 @@
+#!/bin/bash
+echo "Enter + to add two numbers"
+echo "Enter - to subtract two numbers"
+echo "Enter x to multiply two numbers"
+echo "Enter / to divide two numbers"
+read -p "enter numb 1 operator num2 :" a c b
+case $c in
+    +) echo "$((a+b))" ;;
+    -) echo "$((a-b))" ;;
+    x) echo "$((a*b))" ;;
+    /) if [ $b -ne 0 ]; then
+         echo "$((a/b))"
+	 else
+	 echo "error"
+	 fi
+    ;;
+esac

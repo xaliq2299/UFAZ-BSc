@@ -1,0 +1,8 @@
+#!/bin/bash
+counter=20
+until [ $counter -le 0 ]
+do
+echo $counter
+let counter-=1
+done
+

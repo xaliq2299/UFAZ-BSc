@@ -1,0 +1,17 @@
+#!/bin/bash
+start=`date +%s`
+read -p "Dear user give a number:" n
+let COUNTER=1
+let SUM=0
+while [ $COUNTER -lt $n ]
+do
+let SUM=$SUM+$COUNTER
+let COUNTER=$COUNTER+2
+done
+echo "The summation of Odd number are $SUM"
+end=`date +%s`
+let deltatime=end-start
+let hours=deltatime/3600
+let minutes=(deltatime/60)%60
+let seconds=deltatime%60
+printf "Time spent: %d:%02d:%02d\n" $hours $minutes $seconds

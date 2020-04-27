@@ -1,0 +1,16 @@
+#!/bin/bash
+read -p "Enter number:" numb
+while [ $numb -lt 0 ]
+do
+	print "please give a positive number"
+	read -p "Enter number:" numb
+done
+if [ $numb -eq 0 ]; then
+	echo "the number is zero"
+else
+	while [ $numb -ne 0 ]
+	do
+	echo "The number is $numb"
+	let numb=$numb-1
+	done
+fi

@@ -1,0 +1,8 @@
+#!/bin/bash
+ar[1]=2
+ar[2]=7
+ar[3]=9
+for index in 1 2 3
+do 
+	echo ${ar[index]}
+done

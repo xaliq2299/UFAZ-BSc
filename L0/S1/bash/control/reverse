@@ -1,0 +1,13 @@
+echo "enter any number"
+read a
+reverse=0
+if [ $a -gt 0 ]; then
+while [ $a -ne 0 ]  
+do
+	let reverse=$(($reverse*10))+$(($a%10))
+	let a=$a/10
+done
+else 
+	exit
+fi
+echo "the reverse of this number is $reverse"

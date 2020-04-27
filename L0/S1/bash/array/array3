@@ -1,0 +1,8 @@
+#!/bin/bash
+# There are different ways of assigning arrays
+# Here is one of them
+bar=( messi suarez neymar )
+mun=( [5]=rojo [10]=rooney )
+echo "${bar[2]}"
+echo "${mun[10]}"
+echo "${bar[13]}"

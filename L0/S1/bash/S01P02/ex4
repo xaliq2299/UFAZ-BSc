@@ -1,0 +1,7 @@
+#!/bin/bash
+read -p "please enter the width" width
+read -p "please enter the height" height
+area=$(($width*$height))
+inchesarea=$[(($area*100))/254]
+echo "The Area" $area
+echo "The Area value in inche unit" $inchesarea

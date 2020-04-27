@@ -1,0 +1,10 @@
+#!/bin/csh -xv
+##Reminder service using calendar and mail
+set tfile = /tmp/remind_$$                 ## temporary file 
+#echo $tfile
+calendar > $tfile 	               	   ##consult calendar file
+if (! -z $tfile) then 			   ##send msg if necessary
+   cat $tfile >> remind_20190
+endif
+rm -f $tfile  
+
