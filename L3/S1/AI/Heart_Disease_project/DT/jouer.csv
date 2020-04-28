@@ -1,0 +1,15 @@
+ensoleillement;temperature;humidite;vent;jouer
+soleil;75;70;oui;oui
+soleil;80;90;oui;non
+soleil;85;85;non;non
+soleil;72;95;non;non
+soleil;69;70;non;oui
+couvert;72;90;oui;oui
+couvert;83;78;non;oui
+couvert;64;65;oui;oui
+couvert;81;75;non;oui
+pluie;71;80;oui;non
+pluie;65;70;oui;non
+pluie;75;80;non;oui
+pluie;68;80;non;oui
+pluie;70;96;non;oui
