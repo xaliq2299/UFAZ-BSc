@@ -1,0 +1,93 @@
+# def time_compare(arrival, departure):
+# 	'''
+# 	when we have different flights we check whether we reach for next flight or not
+# 	if return 0 means departure is earlier
+# 	if return 1 means arrival is earlier
+# 	'''
+# 	if arrival['Year'] > departure['Year']:
+# 		return 0
+# 	if arrival['Month'] > departure['Month']:
+# 		return 0
+# 	if arrival['DayofMonth'] > departure['DayofMonth']:
+# 		return 0
+# 	arr_h = arrival['ArrTime']//100
+# 	arr_m = arrival['ArrTime']%100
+# 	dep_h =	departure['DepTime']//100
+# 	dep_m =	departure['DepTime']%100
+# 	if arr_h > dep_h:
+# 		return 0
+# 	if arr_m > dep_m:
+# 		return 0
+# 	return 1
+
+
+# def time_add(instance):
+# 	'''
+# 	calculating adding some value to time
+# 	as there are queues in airports we assume that average time to wait is 15 minutes, in each case arrival and departure
+# 	for this case we consider time between arrival of one flight and departure of another should be more than 30 minutes
+# 	that's why add 30 minutes to arrival time 
+# 	'''
+# 	time_h = instance['ArrTime']//100
+# 	time_m = instance['ArrTime']%100 + 30
+# 	instance['ArrTime'] = (time_h*100 + time_m)
+# 	return instance
+
+
+# def time_check(instance):
+# 	'''
+# 	here we check for correctness of flights: time, day, month, year - of arrival time
+# 	'''
+# 	time_h = instance['ArrTime']//100
+# 	time_m = instance['ArrTime']%100
+# 	if time_m >= 60:
+# 		time_m %= 60
+# 		time_h += 1
+# 	if time_h >= 24:
+# 		time_h = 0
+# 		instance['DayofMonth'] += 1
+# 	instance['ArrTime'] = (time_h*100 + time_m)
+
+# 	if instance['Month'] == 2 and instance['Year']%4 == 0 and instance['DayofMonth'] >= 30:
+# 		instance['DayofMonth'] %= 29
+# 		instance['Month'] += 1
+# 	if instance['Month'] == 2 and instance['Year']%4 != 0 and instance['DayofMonth'] >= 29:
+# 		instance['DayofMonth'] %= 28
+# 		instance['Month'] += 1
+
+# 	high_monthes = [1, 3, 5, 7, 8, 10, 12]
+# 	if instance['Month'] in high_monthes and instance['DayofMonth'] >= 32:
+# 		instance['DayofMonth'] %= 31
+# 		instance['Month'] += 1
+# 	if instance['Month'] not in high_monthes and instance['DayofMonth'] >= 31:
+# 		instance['DayofMonth'] %= 30
+# 		instance['Month'] += 1
+
+# 	if instance['Month'] >= 13:
+# 		instance['Month'] %= 12
+# 		instance['Year'] += 1
+
+# 	return instance
+
+
+# def time_driver(data, route, index, arr_flight):
+# 	'''
+# 	in this function we check whether we have possible flights for pathes between each node
+# 	if we have one return True, if not return False
+# 	'''
+# 	if index >= len(route)-1:
+# 		return True
+# 	if index == 0:
+# 		temp_data_0_1 = data[(data['Origin']==route[index])&(data['Dest']==route[index+1])]
+# 		temp_data_1_2 = data[(data['Origin']==route[index+1])&(data['Dest']==route[index+2])]
+# 		# flights[(flights['Origin']=='IND')&(flights['Dest']=='MCO')].iloc[0:3, 0:3]
+# 		for i in range(len(temp_data_0_1)):
+# 			for j in range(len(temp_data_1_2)):
+# 				if time_compare(time_check(time_add(temp_data_0_1.iloc[i, :])), temp_data_1_2.iloc[j, :]) and time_driver(data, route, index+2, temp_data_1_2.iloc[j, :]):
+# 					return True
+# 	else:
+# 		temp_data = data[(data['Origin']==route[index])&(data['Dest']==route[index+1])]
+# 		for i in range(len(temp_data)):
+# 			if time_compare(time_check(time_add(arr_flight)), temp_data.iloc[i, :]) and time_driver(data, route, index+1, temp_data.iloc[i, :]):
+# 					return True
+# 	return False
