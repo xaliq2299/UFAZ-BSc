@@ -1,0 +1,8 @@
+compiler le code des services à fournir
+copier les .class de l'interface et l'implémentation du dossier "services" au dossier "serveur"
+compiler le code du serveur
+copier le .class de l'interface du service (Message.class ici) du dossier "services" au dossier "client"
+compiler le code du client
+lancer le service de nommage à partir de la racine du dossier "serveur"
+exécuter le serveur
+exécuter le client
